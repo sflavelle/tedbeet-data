@@ -1,0 +1,17 @@
+[
+    {
+        "active" : true,
+        "case_sensitive" : false,
+        "cooldown" : 1,
+        "name" : "whatdidimiss",
+        "owner" : "49288117307310080",
+        "regex" : false,
+        "responses" : [
+            "I died! <:mrgreen:230128382765957120>"
+        ],
+        "server" : "124680630075260928",
+        "triggered" : 0,
+        "triggered_by" : "What did I miss?",
+        "type" : "all"
+    }
+]
