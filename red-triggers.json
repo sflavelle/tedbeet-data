@@ -137,7 +137,8 @@
             "\ud83c\udf99 There are 8 amazing mythological monsters you just need to ingest at once to die.",
             "\ud83c\udf99 Mosquitoes bite people with Type O blood nearly twice as often as those with a college education!",
             "\ud83c\udf99 Americans eat 13 billion hamburgers a week.",
-            "\ud83c\udf99 https://twitter.com/CapnBooker/status/849431138154295304"
+            "\ud83c\udf99 https://twitter.com/CapnBooker/status/849431138154295304",
+            "\ud83c\udf99 Oprah Winfrey invented the head."
         ],
         "server" : null,
         "triggered" : 225,
@@ -266,7 +267,7 @@
             "Beatbot's kinda dead. Rest in peace, buddy."
         ],
         "server" : "124680630075260928",
-        "triggered" : 1,
+        "triggered" : 2,
         "triggered_by" : "^[wW]hat (else )?did [iI] miss$",
         "type" : "random"
     },
@@ -2554,6 +2555,33 @@
         "server" : "124680630075260928",
         "triggered" : 1,
         "triggered_by" : "anxiety",
+        "type" : "random"
+    },
+    {
+        "active" : true,
+        "case_sensitive" : false,
+        "cooldown" : 1,
+        "name" : "raocowisms",
+        "owner" : "49288117307310080",
+        "regex" : false,
+        "responses" : [
+            "There comes a time when a man must ask himself...video game.",
+            "I have a machine gun and it's in my pants for some reason.",
+            "Everyone's a winner in the Book of the Dead! It's just that the prize is pretty terrible.",
+            "The potential was there, the floor was not.",
+            "I don't how I feel about my pasta being on a highway and not being in my stomach.",
+            "I like my spears like I like my spears. Shaped like a spear and also with the function of a spear.",
+            "Luigi has a hand in his pocket while he is flashing gang signs.",
+            "The world is my oyster, but I happen to not like oysters very much.",
+            "If you don't gamble big, you don't win big. That certainly never screwed anyone ever in their entire life ever ever.",
+            "You know what they say: 3 gallons of eggs a day will probably make you sick eventually.",
+            "Revenge is a dish best served warm, but I'm going to take it cold if it's the only option available.",
+            "You probably shouldn\u2019t wear a knife as a hat.",
+            "\ud83d\udeaa This is a door. It leads to drugs. So don\u2019t ever open any doors ever."
+        ],
+        "server" : "124680630075260928",
+        "triggered" : 0,
+        "triggered_by" : "Hey there everyone, this is raocow",
         "type" : "random"
     }
 ]
