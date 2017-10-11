@@ -1742,7 +1742,8 @@
             "**Neurario** is a good",
             "**Neurario** is a http://puu.sh/mMceX/c1e4266cec.png",
             "**Eris** is Moses",
-            "**Eris** felt Mining Woman Woman"
+            "**Eris** felt Mining Woman Woman",
+            "Meanwhile, in Neu's dreams: https://www.youtube.com/watch?v=rYE84KgOPXY"
         ],
         "server" : "124680630075260928",
         "triggered" : 3,
@@ -2298,7 +2299,7 @@
             "**Ash** has 8 knobs on thier face"
         ],
         "server" : "124680630075260928",
-        "triggered" : 0,
+        "triggered" : 1,
         "triggered_by" : "^([hH]ey )?([aA]sh(deer|leigh)?|<@49345026618036224>)$",
         "type" : "random"
     },
