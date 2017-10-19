@@ -141,7 +141,7 @@
             "\ud83c\udf99 Oprah Winfrey invented the head."
         ],
         "server" : null,
-        "triggered" : 225,
+        "triggered" : 231,
         "triggered_by" : "^([bB]ucket )?[Ff]acts$",
         "type" : "random"
     },
@@ -267,7 +267,7 @@
             "Beatbot's kinda dead. Rest in peace, buddy."
         ],
         "server" : "124680630075260928",
-        "triggered" : 2,
+        "triggered" : 4,
         "triggered_by" : "^[wW]hat (else )?did [iI] miss$",
         "type" : "random"
     },
@@ -1072,7 +1072,7 @@
             "http://i.imgur.com/pLLBIu0.gifv"
         ],
         "server" : "124680630075260928",
-        "triggered" : 1,
+        "triggered" : 3,
         "triggered_by" : "^(bun bun bun)$",
         "type" : "random"
     },
@@ -2582,7 +2582,7 @@
         ],
         "server" : "124680630075260928",
         "triggered" : 0,
-        "triggered_by" : "Hey there everyone, this is raocow",
+        "triggered_by" : "Give me a raocowism",
         "type" : "random"
     }
 ]
