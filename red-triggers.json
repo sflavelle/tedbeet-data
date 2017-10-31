@@ -141,7 +141,7 @@
             "\ud83c\udf99 Oprah Winfrey invented the head."
         ],
         "server" : null,
-        "triggered" : 231,
+        "triggered" : 239,
         "triggered_by" : "^([bB]ucket )?[Ff]acts$",
         "type" : "random"
     },
@@ -267,7 +267,7 @@
             "Beatbot's kinda dead. Rest in peace, buddy."
         ],
         "server" : "124680630075260928",
-        "triggered" : 4,
+        "triggered" : 11,
         "triggered_by" : "^[wW]hat (else )?did [iI] miss$",
         "type" : "random"
     },
@@ -1072,7 +1072,7 @@
             "http://i.imgur.com/pLLBIu0.gifv"
         ],
         "server" : "124680630075260928",
-        "triggered" : 3,
+        "triggered" : 4,
         "triggered_by" : "^(bun bun bun)$",
         "type" : "random"
     },
@@ -1684,7 +1684,7 @@
             "DEER ARE THE OVERLORDS. OBEY."
         ],
         "server" : "124680630075260928",
-        "triggered" : 8,
+        "triggered" : 10,
         "triggered_by" : "^(deer(deerdeer)?)$",
         "type" : "random"
     },
@@ -1780,7 +1780,7 @@
             "http://i.imgur.com/Po2Bqun.png"
         ],
         "server" : "124680630075260928",
-        "triggered" : 0,
+        "triggered" : 2,
         "triggered_by" : "^([hH]ey )?([hH]inchy?|<@138786599033896960>)$",
         "type" : "random"
     },
@@ -1944,7 +1944,7 @@
             "TedHubish's fursona is jon Arbuckle."
         ],
         "server" : "124680630075260928",
-        "triggered" : 0,
+        "triggered" : 1,
         "triggered_by" : "^([hH]ey )?([tT]ed([hH]ubish)?|<@104004382516867072>)$",
         "type" : "random"
     },
@@ -2156,7 +2156,7 @@
             "vidvisionify's fursona is a red panda"
         ],
         "server" : "124680630075260928",
-        "triggered" : 1,
+        "triggered" : 2,
         "triggered_by" : "^([hH]ey )?([pP]hil|[vV]idvisionify|<@64612757739147264>)$",
         "type" : "random"
     },
