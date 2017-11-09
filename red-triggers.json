@@ -141,7 +141,7 @@
             "\ud83c\udf99 Oprah Winfrey invented the head."
         ],
         "server" : null,
-        "triggered" : 239,
+        "triggered" : 250,
         "triggered_by" : "^([bB]ucket )?[Ff]acts$",
         "type" : "random"
     },
@@ -267,7 +267,7 @@
             "Beatbot's kinda dead. Rest in peace, buddy."
         ],
         "server" : "124680630075260928",
-        "triggered" : 11,
+        "triggered" : 18,
         "triggered_by" : "^[wW]hat (else )?did [iI] miss$",
         "type" : "random"
     },
@@ -635,7 +635,7 @@
             "Sierra."
         ],
         "server" : "124680630075260928",
-        "triggered" : 24,
+        "triggered" : 25,
         "triggered_by" : "phew",
         "type" : "all"
     },
