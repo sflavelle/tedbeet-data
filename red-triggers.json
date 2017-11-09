@@ -141,7 +141,7 @@
             "\ud83c\udf99 Oprah Winfrey invented the head."
         ],
         "server" : null,
-        "triggered" : 250,
+        "triggered" : 252,
         "triggered_by" : "^([bB]ucket )?[Ff]acts$",
         "type" : "random"
     },
@@ -149,7 +149,7 @@
         "active" : true,
         "case_sensitive" : false,
         "cooldown" : 2,
-        "name" : "facts",
+        "name" : "whatdidimiss",
         "owner" : "49288117307310080",
         "regex" : true,
         "responses" : [
@@ -264,7 +264,8 @@
             "National Union of Sluts Accuses Foreign Workers of Coming Over Here And Taking Our Dicks",
             "What's the hops, bun?",
             "I died! 8D",
-            "Beatbot's kinda dead. Rest in peace, buddy."
+            "Beatbot's kinda dead. Rest in peace, buddy.",
+            "The Radioactive Puppies of Chernobyl Are Finally Here and People Are Dead"
         ],
         "server" : "124680630075260928",
         "triggered" : 18,
