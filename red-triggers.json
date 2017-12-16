@@ -141,7 +141,7 @@
             "\ud83c\udf99 Oprah Winfrey invented the head."
         ],
         "server" : null,
-        "triggered" : 283,
+        "triggered" : 284,
         "triggered_by" : "^([bB]ucket )?[Ff]acts$",
         "type" : "random"
     },
@@ -1748,7 +1748,7 @@
             "Meanwhile, in Neu's dreams: https://www.youtube.com/watch?v=rYE84KgOPXY"
         ],
         "server" : "124680630075260928",
-        "triggered" : 3,
+        "triggered" : 4,
         "triggered_by" : "^([hH]ey )?([nN]eurari[oa]|[sS]imon|<@49288117307310080>|[eE]ris)$",
         "type" : "random"
     },
@@ -1845,7 +1845,7 @@
             "**KcH's** fursona is a fish."
         ],
         "server" : "124680630075260928",
-        "triggered" : 0,
+        "triggered" : 1,
         "triggered_by" : "^([hH]ey )?([kK]c[hH]?|<@217865688868585473>|[cC]asey)$",
         "type" : "random"
     },
@@ -1946,7 +1946,7 @@
             "TedHubish's fursona is jon Arbuckle."
         ],
         "server" : "124680630075260928",
-        "triggered" : 3,
+        "triggered" : 4,
         "triggered_by" : "^([hH]ey )?([tT]ed([hH]ubish)?|<@104004382516867072>)$",
         "type" : "random"
     },
@@ -2301,7 +2301,7 @@
             "**Ash** has 8 knobs on thier face"
         ],
         "server" : "124680630075260928",
-        "triggered" : 1,
+        "triggered" : 2,
         "triggered_by" : "^([hH]ey )?([aA]sh(deer|leigh)?|<@49345026618036224>)$",
         "type" : "random"
     },
@@ -2367,8 +2367,8 @@
             "https://i.imgur.com/oroWWH4.jpg"
         ],
         "server" : "124680630075260928",
-        "triggered" : 2,
-        "triggered_by" : "^([hH]ey )?([bB]ri(an|guy)?|<@49288117307310080>)$",
+        "triggered" : 3,
+        "triggered_by" : "^([hH]ey )?([bB]ri(an|guy)?|<@78316152614301696>)$",
         "type" : "random"
     },
     {
