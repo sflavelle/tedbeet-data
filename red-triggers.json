@@ -138,10 +138,11 @@
             "\ud83c\udf99 Mosquitoes bite people with Type O blood nearly twice as often as those with a college education!",
             "\ud83c\udf99 Americans eat 13 billion hamburgers a week.",
             "\ud83c\udf99 https://twitter.com/CapnBooker/status/849431138154295304",
-            "\ud83c\udf99 Oprah Winfrey invented the head."
+            "\ud83c\udf99 Oprah Winfrey invented the head.",
+            "\ud83c\udf99 Want to get pregnant without a man? Just use baby powder!"
         ],
         "server" : null,
-        "triggered" : 284,
+        "triggered" : 287,
         "triggered_by" : "^([bB]ucket )?[Ff]acts$",
         "type" : "random"
     },
@@ -269,7 +270,7 @@
             "file: gb-vg.jpg"
         ],
         "server" : "124680630075260928",
-        "triggered" : 22,
+        "triggered" : 24,
         "triggered_by" : "^[wW]hat (else )?did [iI] miss$",
         "type" : "random"
     },
@@ -1845,7 +1846,7 @@
             "**KcH's** fursona is a fish."
         ],
         "server" : "124680630075260928",
-        "triggered" : 1,
+        "triggered" : 2,
         "triggered_by" : "^([hH]ey )?([kK]c[hH]?|<@217865688868585473>|[cC]asey)$",
         "type" : "random"
     },
@@ -1946,7 +1947,7 @@
             "TedHubish's fursona is jon Arbuckle."
         ],
         "server" : "124680630075260928",
-        "triggered" : 4,
+        "triggered" : 10,
         "triggered_by" : "^([hH]ey )?([tT]ed([hH]ubish)?|<@104004382516867072>)$",
         "type" : "random"
     },
@@ -2158,7 +2159,7 @@
             "vidvisionify's fursona is a red panda"
         ],
         "server" : "124680630075260928",
-        "triggered" : 3,
+        "triggered" : 4,
         "triggered_by" : "^([hH]ey )?([pP]hil|[vV]idvisionify|<@64612757739147264>)$",
         "type" : "random"
     },
@@ -2301,7 +2302,7 @@
             "**Ash** has 8 knobs on thier face"
         ],
         "server" : "124680630075260928",
-        "triggered" : 2,
+        "triggered" : 4,
         "triggered_by" : "^([hH]ey )?([aA]sh(deer|leigh)?|<@49345026618036224>)$",
         "type" : "random"
     },
