@@ -142,7 +142,7 @@
             "\ud83c\udf99 Want to get pregnant without a man? Just use baby powder!"
         ],
         "server" : null,
-        "triggered" : 287,
+        "triggered" : 289,
         "triggered_by" : "^([bB]ucket )?[Ff]acts$",
         "type" : "random"
     },
@@ -270,8 +270,8 @@
             "file: gb-vg.jpg"
         ],
         "server" : "124680630075260928",
-        "triggered" : 24,
-        "triggered_by" : "^[wW]hat (else )?did [iI] miss$",
+        "triggered" : 30,
+        "triggered_by" : "^[wW]hat (else )?did [iI] miss\\??$",
         "type" : "random"
     },
     {
@@ -1947,7 +1947,7 @@
             "TedHubish's fursona is jon Arbuckle."
         ],
         "server" : "124680630075260928",
-        "triggered" : 10,
+        "triggered" : 16,
         "triggered_by" : "^([hH]ey )?([tT]ed([hH]ubish)?|<@104004382516867072>)$",
         "type" : "random"
     },
@@ -2302,7 +2302,7 @@
             "**Ash** has 8 knobs on thier face"
         ],
         "server" : "124680630075260928",
-        "triggered" : 4,
+        "triggered" : 6,
         "triggered_by" : "^([hH]ey )?([aA]sh(deer|leigh)?|<@49345026618036224>)$",
         "type" : "random"
     },
