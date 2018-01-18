@@ -142,7 +142,7 @@
             "\ud83c\udf99 Want to get pregnant without a man? Just use baby powder!"
         ],
         "server" : null,
-        "triggered" : 292,
+        "triggered" : 296,
         "triggered_by" : "^([bB]ucket )?[Ff]acts$",
         "type" : "random"
     },
@@ -267,10 +267,11 @@
             "I died! 8D",
             "Beatbot's kinda dead. Rest in peace, buddy.",
             "The Radioactive Puppies of Chernobyl Are Finally Here and People Are Dead",
-            "file: gb-vg.jpg"
+            "file: gb-vg.jpg",
+            "Prizes? https://www.youtube.com/watch?v=TOyJMr5Q9cY"
         ],
         "server" : "124680630075260928",
-        "triggered" : 35,
+        "triggered" : 38,
         "triggered_by" : "^[wW]hat (else )?did [iI] miss\\??$",
         "type" : "random"
     },
@@ -1947,7 +1948,7 @@
             "TedHubish's fursona is jon Arbuckle."
         ],
         "server" : "124680630075260928",
-        "triggered" : 16,
+        "triggered" : 19,
         "triggered_by" : "^([hH]ey )?([tT]ed([hH]ubish)?|<@104004382516867072>)$",
         "type" : "random"
     },
