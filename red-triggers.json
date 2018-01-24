@@ -142,7 +142,7 @@
             "\ud83c\udf99 Want to get pregnant without a man? Just use baby powder!"
         ],
         "server" : null,
-        "triggered" : 296,
+        "triggered" : 298,
         "triggered_by" : "^([bB]ucket )?[Ff]acts$",
         "type" : "random"
     },
@@ -271,7 +271,7 @@
             "Prizes? https://www.youtube.com/watch?v=TOyJMr5Q9cY"
         ],
         "server" : "124680630075260928",
-        "triggered" : 38,
+        "triggered" : 42,
         "triggered_by" : "^[wW]hat (else )?did [iI] miss\\??$",
         "type" : "random"
     },
@@ -608,7 +608,7 @@
             "https://www.youtube.com/watch?v=VHNzseM_v6I"
         ],
         "server" : "124680630075260928",
-        "triggered" : 57,
+        "triggered" : 60,
         "triggered_by" : "give me a jam",
         "type" : "random"
     },
@@ -639,7 +639,7 @@
             "Sierra."
         ],
         "server" : "124680630075260928",
-        "triggered" : 26,
+        "triggered" : 27,
         "triggered_by" : "phew",
         "type" : "all"
     },
@@ -1076,7 +1076,7 @@
             "http://i.imgur.com/pLLBIu0.gifv"
         ],
         "server" : "124680630075260928",
-        "triggered" : 4,
+        "triggered" : 6,
         "triggered_by" : "^(bun bun bun)$",
         "type" : "random"
     },
@@ -1688,7 +1688,7 @@
             "DEER ARE THE OVERLORDS. OBEY."
         ],
         "server" : "124680630075260928",
-        "triggered" : 10,
+        "triggered" : 11,
         "triggered_by" : "^(deer(deerdeer)?)$",
         "type" : "random"
     },
@@ -1847,7 +1847,7 @@
             "**KcH's** fursona is a fish."
         ],
         "server" : "124680630075260928",
-        "triggered" : 2,
+        "triggered" : 3,
         "triggered_by" : "^([hH]ey )?([kK]c[hH]?|<@217865688868585473>|[cC]asey)$",
         "type" : "random"
     },
@@ -2160,7 +2160,7 @@
             "vidvisionify's fursona is a red panda"
         ],
         "server" : "124680630075260928",
-        "triggered" : 5,
+        "triggered" : 7,
         "triggered_by" : "^([hH]ey )?([pP]hil|[vV]idvisionify|<@64612757739147264>)$",
         "type" : "random"
     },
