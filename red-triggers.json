@@ -142,7 +142,7 @@
             "\ud83c\udf99 Want to get pregnant without a man? Just use baby powder!"
         ],
         "server" : null,
-        "triggered" : 298,
+        "triggered" : 304,
         "triggered_by" : "^([bB]ucket )?[Ff]acts$",
         "type" : "random"
     },
@@ -268,10 +268,11 @@
             "Beatbot's kinda dead. Rest in peace, buddy.",
             "The Radioactive Puppies of Chernobyl Are Finally Here and People Are Dead",
             "file: gb-vg.jpg",
-            "Prizes? https://www.youtube.com/watch?v=TOyJMr5Q9cY"
+            "Prizes? https://www.youtube.com/watch?v=TOyJMr5Q9cY",
+            "You Died"
         ],
         "server" : "124680630075260928",
-        "triggered" : 42,
+        "triggered" : 54,
         "triggered_by" : "^[wW]hat (else )?did [iI] miss\\??$",
         "type" : "random"
     },
@@ -605,10 +606,14 @@
             "https://www.youtube.com/watch?v=4gdw0qs03qs",
             "https://www.youtube.com/watch?v=kh2NZWBvfWI",
             "https://www.youtube.com/watch?v=a0ZkhlJUQAM",
-            "https://www.youtube.com/watch?v=VHNzseM_v6I"
+            "https://www.youtube.com/watch?v=VHNzseM_v6I",
+            "https://youtu.be/dsWkKp6DKH4",
+            "https://www.youtube.com/watch?v=0tdyU_gW6WE",
+            "https://www.youtube.com/watch?v=m2Z0CyuyfMI",
+            "https://www.youtube.com/watch?v=_mkiGMtbrPM"
         ],
         "server" : "124680630075260928",
-        "triggered" : 60,
+        "triggered" : 64,
         "triggered_by" : "give me a jam",
         "type" : "random"
     },
@@ -1703,7 +1708,7 @@
             "https://www.youtube.com/watch?v=mg4FzuBNvdE"
         ],
         "server" : "124680630075260928",
-        "triggered" : 3,
+        "triggered" : 4,
         "triggered_by" : "pizzaaaa+",
         "type" : "all"
     },
@@ -1747,7 +1752,8 @@
             "**Neurario** is a http://puu.sh/mMceX/c1e4266cec.png",
             "**Eris** is Moses",
             "**Eris** felt Mining Woman Woman",
-            "Meanwhile, in Neu's dreams: https://www.youtube.com/watch?v=rYE84KgOPXY"
+            "Meanwhile, in Neu's dreams: https://www.youtube.com/watch?v=rYE84KgOPXY",
+            "Lily is a hoax perpetuated by the government"
         ],
         "server" : "124680630075260928",
         "triggered" : 4,
@@ -1847,7 +1853,7 @@
             "**KcH's** fursona is a fish."
         ],
         "server" : "124680630075260928",
-        "triggered" : 3,
+        "triggered" : 4,
         "triggered_by" : "^([hH]ey )?([kK]c[hH]?|<@217865688868585473>|[cC]asey)$",
         "type" : "random"
     },
@@ -1948,7 +1954,7 @@
             "TedHubish's fursona is jon Arbuckle."
         ],
         "server" : "124680630075260928",
-        "triggered" : 19,
+        "triggered" : 23,
         "triggered_by" : "^([hH]ey )?([tT]ed([hH]ubish)?|<@104004382516867072>)$",
         "type" : "random"
     },
@@ -2058,7 +2064,7 @@
             "tobi's fursona is a cat"
         ],
         "server" : "124680630075260928",
-        "triggered" : 1,
+        "triggered" : 5,
         "triggered_by" : "^([hH]ey )?([tT]obi?|<@104679344806309888>)$",
         "type" : "random"
     },
@@ -2094,7 +2100,7 @@
             "http://66.media.tumblr.com/cf10c93099f61d1d7d173b0623f8c84d/tumblr_n3sh2bbTQJ1qz4mo8o1_500.jpg"
         ],
         "server" : "124680630075260928",
-        "triggered" : 0,
+        "triggered" : 1,
         "triggered_by" : "^([hH]ey )?([sS]picy(rab)?|<@190729135771877376>)$",
         "type" : "random"
     },
@@ -2157,10 +2163,11 @@
             "vidvisionify is still a drug.",
             "vidvisionify is Felipe.",
             "vidvisionify is always on drugs.",
-            "vidvisionify's fursona is a red panda"
+            "vidvisionify's fursona is a red panda",
+            "Phil is the problem."
         ],
         "server" : "124680630075260928",
-        "triggered" : 7,
+        "triggered" : 8,
         "triggered_by" : "^([hH]ey )?([pP]hil|[vV]idvisionify|<@64612757739147264>)$",
         "type" : "random"
     },
@@ -2303,7 +2310,7 @@
             "**Ash** has 8 knobs on thier face"
         ],
         "server" : "124680630075260928",
-        "triggered" : 7,
+        "triggered" : 11,
         "triggered_by" : "^([hH]ey )?([aA]sh(deer|leigh)?|<@49345026618036224>)$",
         "type" : "random"
     },
