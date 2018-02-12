@@ -142,7 +142,7 @@
             "\ud83c\udf99 Want to get pregnant without a man? Just use baby powder!"
         ],
         "server" : null,
-        "triggered" : 304,
+        "triggered" : 305,
         "triggered_by" : "^([bB]ucket )?[Ff]acts$",
         "type" : "random"
     },
@@ -272,7 +272,7 @@
             "You Died"
         ],
         "server" : "124680630075260928",
-        "triggered" : 54,
+        "triggered" : 55,
         "triggered_by" : "^[wW]hat (else )?did [iI] miss\\??$",
         "type" : "random"
     },
@@ -610,10 +610,11 @@
             "https://youtu.be/dsWkKp6DKH4",
             "https://www.youtube.com/watch?v=0tdyU_gW6WE",
             "https://www.youtube.com/watch?v=m2Z0CyuyfMI",
-            "https://www.youtube.com/watch?v=_mkiGMtbrPM"
+            "https://www.youtube.com/watch?v=_mkiGMtbrPM",
+            "https://youtu.be/gDv8oZoo7-c"
         ],
         "server" : "124680630075260928",
-        "triggered" : 64,
+        "triggered" : 65,
         "triggered_by" : "give me a jam",
         "type" : "random"
     },
