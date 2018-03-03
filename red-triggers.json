@@ -139,10 +139,11 @@
             "\ud83c\udf99 Americans eat 13 billion hamburgers a week.",
             "\ud83c\udf99 https://twitter.com/CapnBooker/status/849431138154295304",
             "\ud83c\udf99 Oprah Winfrey invented the head.",
-            "\ud83c\udf99 Want to get pregnant without a man? Just use baby powder!"
+            "\ud83c\udf99 Want to get pregnant without a man? Just use baby powder!",
+            "\ud83c\udf99 This is a place you have been to."
         ],
         "server" : null,
-        "triggered" : 305,
+        "triggered" : 316,
         "triggered_by" : "^([bB]ucket )?[Ff]acts$",
         "type" : "random"
     },
@@ -272,7 +273,7 @@
             "You Died"
         ],
         "server" : "124680630075260928",
-        "triggered" : 55,
+        "triggered" : 65,
         "triggered_by" : "^[wW]hat (else )?did [iI] miss\\??$",
         "type" : "random"
     },
@@ -611,10 +612,24 @@
             "https://www.youtube.com/watch?v=0tdyU_gW6WE",
             "https://www.youtube.com/watch?v=m2Z0CyuyfMI",
             "https://www.youtube.com/watch?v=_mkiGMtbrPM",
-            "https://youtu.be/gDv8oZoo7-c"
+            "https://youtu.be/gDv8oZoo7-c",
+            "https://www.youtube.com/watch?v=qq80zqdNNJU",
+            "https://www.youtube.com/watch?v=K_p7Kek6RR8",
+            "https://www.youtube.com/watch?v=iZ3jS2XGMGA",
+            "https://www.youtube.com/watch?v=zdiRPBWE--g",
+            "https://musiclab.chromeexperiments.com/Song-Maker/song/4722848312590336",
+            "https://www.youtube.com/watch?v=o9wlOahPtbU",
+            "https://goo.gl/zEkUjj",
+            "https://www.youtube.com/watch?v=7tcygOGHsWY",
+            "https://www.youtube.com/watch?v=3nlSDxvt6JU",
+            "https://www.youtube.com/watch?v=ty31QY5ZGHo",
+            "https://www.youtube.com/watch?v=_mkiGMtbrPM",
+            "https://www.youtube.com/watch?v=EpGrI34a_fM",
+            "https://www.youtube.com/watch?v=5DlkrQ5rig0",
+            "https://www.youtube.com/watch?v=tAClN7cCwIY"
         ],
         "server" : "124680630075260928",
-        "triggered" : 65,
+        "triggered" : 68,
         "triggered_by" : "give me a jam",
         "type" : "random"
     },
@@ -1694,7 +1709,7 @@
             "DEER ARE THE OVERLORDS. OBEY."
         ],
         "server" : "124680630075260928",
-        "triggered" : 11,
+        "triggered" : 13,
         "triggered_by" : "^(deer(deerdeer)?)$",
         "type" : "random"
     },
@@ -1955,7 +1970,7 @@
             "TedHubish's fursona is jon Arbuckle."
         ],
         "server" : "124680630075260928",
-        "triggered" : 23,
+        "triggered" : 31,
         "triggered_by" : "^([hH]ey )?([tT]ed([hH]ubish)?|<@104004382516867072>)$",
         "type" : "random"
     },
@@ -2311,7 +2326,7 @@
             "**Ash** has 8 knobs on thier face"
         ],
         "server" : "124680630075260928",
-        "triggered" : 11,
+        "triggered" : 12,
         "triggered_by" : "^([hH]ey )?([aA]sh(deer|leigh)?|<@49345026618036224>)$",
         "type" : "random"
     },
