@@ -273,7 +273,7 @@
             "You Died"
         ],
         "server" : "124680630075260928",
-        "triggered" : 84,
+        "triggered" : 85,
         "triggered_by" : "^[wW]hat (else )?did [iI] miss\\??$",
         "type" : "random"
     },
@@ -1771,7 +1771,8 @@
             "**Eris** is Moses",
             "**Eris** felt Mining Woman Woman",
             "Meanwhile, in Neu's dreams: https://www.youtube.com/watch?v=rYE84KgOPXY",
-            "Lily is a hoax perpetuated by the government"
+            "Lily is a hoax perpetuated by the government",
+            "Lily is https://78.media.tumblr.com/0c6a75fd791859623ce28d5fb028793a/tumblr_of1x48VYOl1r742p8o1_540.jpg"
         ],
         "server" : "124680630075260928",
         "triggered" : 4,
@@ -1972,7 +1973,7 @@
             "TedHubish's fursona is jon Arbuckle."
         ],
         "server" : "124680630075260928",
-        "triggered" : 39,
+        "triggered" : 40,
         "triggered_by" : "^([hH]ey )?([tT]ed([hH]ubish)?|<@104004382516867072>)$",
         "type" : "random"
     },
@@ -2329,7 +2330,7 @@
             "Ash is a real Ash"
         ],
         "server" : "124680630075260928",
-        "triggered" : 14,
+        "triggered" : 16,
         "triggered_by" : "^([hH]ey )?([aA]sh(deer|leigh)?|<@49345026618036224>)$",
         "type" : "random"
     },
