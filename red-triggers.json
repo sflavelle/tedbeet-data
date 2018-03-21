@@ -140,10 +140,11 @@
             "\ud83c\udf99 https://twitter.com/CapnBooker/status/849431138154295304",
             "\ud83c\udf99 Oprah Winfrey invented the head.",
             "\ud83c\udf99 Want to get pregnant without a man? Just use baby powder!",
-            "\ud83c\udf99 This is a place you have been to."
+            "\ud83c\udf99 This is a place you have been to.",
+            "\ud83c\udf99 Smiling and laughing increases your chance of failure."
         ],
         "server" : null,
-        "triggered" : 334,
+        "triggered" : 338,
         "triggered_by" : "^([bB]ucket )?[Ff]acts$",
         "type" : "random"
     },
@@ -273,7 +274,7 @@
             "You Died"
         ],
         "server" : "124680630075260928",
-        "triggered" : 90,
+        "triggered" : 91,
         "triggered_by" : "^[wW]hat (else )?did [iI] miss\\??$",
         "type" : "random"
     },
@@ -1973,7 +1974,7 @@
             "TedHubish's fursona is jon Arbuckle."
         ],
         "server" : "124680630075260928",
-        "triggered" : 40,
+        "triggered" : 41,
         "triggered_by" : "^([hH]ey )?([tT]ed([hH]ubish)?|<@104004382516867072>)$",
         "type" : "random"
     },
