@@ -68,7 +68,7 @@
             "\ud83c\udf99 https://pbs.twimg.com/media/DXYNXPKVwAAeX4u.jpg"
         ],
         "server" : null,
-        "triggered" : 347,
+        "triggered" : 353,
         "triggered_by" : "^([bB]ucket )?[Ff]acts$",
         "type" : "random"
     },
@@ -195,7 +195,8 @@
             "The Radioactive Puppies of Chernobyl Are Finally Here and People Are Dead",
             "file: gb-vg.jpg",
             "Prizes? https://www.youtube.com/watch?v=TOyJMr5Q9cY",
-            "You Died"
+            "You Died",
+            "Those alien bastards are gonna pay for shooting up my parents https://www.youtube.com/watch?v=ufVXscKNkZs"
         ],
         "server" : "124680630075260928",
         "triggered" : 99,
@@ -555,7 +556,8 @@
             "https://www.youtube.com/watch?v=y4nn8o7oBzk",
             "https://www.youtube.com/watch?v=Z3ABuFKIyxs",
             "https://youtu.be/JMnGQvieWyQ",
-            "https://www.youtube.com/watch?v=k55FYtqtXXU"
+            "https://www.youtube.com/watch?v=k55FYtqtXXU",
+            "https://www.youtube.com/watch?v=lO9d-AJai8Q"
         ],
         "server" : "124680630075260928",
         "triggered" : 69,
@@ -589,7 +591,7 @@
             "Sierra."
         ],
         "server" : "124680630075260928",
-        "triggered" : 27,
+        "triggered" : 28,
         "triggered_by" : "phew",
         "type" : "all"
     },
