@@ -68,7 +68,7 @@
             "\ud83c\udf99 https://pbs.twimg.com/media/DXYNXPKVwAAeX4u.jpg"
         ],
         "server" : null,
-        "triggered" : 353,
+        "triggered" : 357,
         "triggered_by" : "^([bB]ucket )?[Ff]acts$",
         "type" : "random"
     },
@@ -200,7 +200,7 @@
             "file: simpsons-imgaynow.jpg"
         ],
         "server" : "124680630075260928",
-        "triggered" : 102,
+        "triggered" : 107,
         "triggered_by" : "^[wW]hat (else )?did [iI] miss\\??$",
         "type" : "random"
     },
