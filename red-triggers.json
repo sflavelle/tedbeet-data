@@ -157,7 +157,6 @@
             "I found pills. https://www.youtube.com/watch?v=gjvFLuJFkgU",
             "Team Fortress 3 was leaked!",
             "Ted married himself. He's finally happy.",
-            "https://youtu.be/asALUN4VLJk?t=11",
             "http://www.albinoblacksheep.com/flash/end",
             "http://www.albinoblacksheep.com/flash/epic2015",
             "Captain Kirk is climbing a mountain. Why is he climbing a mountain?",
@@ -197,10 +196,11 @@
             "Prizes? https://www.youtube.com/watch?v=TOyJMr5Q9cY",
             "You Died",
             "Those alien bastards are gonna pay for shooting up my parents https://www.youtube.com/watch?v=ufVXscKNkZs",
-            "file: simpsons-imgaynow.jpg"
+            "file: simpsons-imgaynow.jpg",
+            "I BANGED LADESH!"
         ],
         "server" : "124680630075260928",
-        "triggered" : 107,
+        "triggered" : 109,
         "triggered_by" : "^[wW]hat (else )?did [iI] miss\\??$",
         "type" : "random"
     },
