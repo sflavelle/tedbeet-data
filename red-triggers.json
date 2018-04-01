@@ -68,7 +68,7 @@
             "\ud83c\udf99 https://pbs.twimg.com/media/DXYNXPKVwAAeX4u.jpg"
         ],
         "server" : null,
-        "triggered" : 357,
+        "triggered" : 359,
         "triggered_by" : "^([bB]ucket )?[Ff]acts$",
         "type" : "random"
     },
@@ -135,7 +135,7 @@
             "The Radioactive April Fools of Chernobyl Are Finally Here and People Are Dead"
         ],
         "server" : "124680630075260928",
-        "triggered" : 112,
+        "triggered" : 130,
         "triggered_by" : "^[wW]hat (else )?did [iI] miss\\??$",
         "type" : "random"
     },
@@ -209,7 +209,7 @@
             "https://www.youtube.com/watch?v=sTSA_sWGM44"
         ],
         "server" : "124680630075260928",
-        "triggered" : 76,
+        "triggered" : 79,
         "triggered_by" : "give me a jam",
         "type" : "random"
     },
@@ -1764,7 +1764,7 @@
             "Phil is the problem."
         ],
         "server" : "124680630075260928",
-        "triggered" : 9,
+        "triggered" : 10,
         "triggered_by" : "^([hH]ey )?([pP]hil|[vV]idvisionify|<@64612757739147264>)$",
         "type" : "random"
     },
@@ -1909,7 +1909,7 @@
             "Ash is gay computer games."
         ],
         "server" : "124680630075260928",
-        "triggered" : 17,
+        "triggered" : 18,
         "triggered_by" : "^([hH]ey )?([aA]sh(deer|leigh)?|<@49345026618036224>)$",
         "type" : "random"
     },
