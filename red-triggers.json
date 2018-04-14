@@ -66,10 +66,11 @@
             "\ud83c\udf99 This is a place you have been to.",
             "\ud83c\udf99 Smiling and laughing increases your chance of failure.",
             "\ud83c\udf99 https://pbs.twimg.com/media/DXYNXPKVwAAeX4u.jpg",
-            "\ud83c\udf99 https://www.youtube.com/watch?v=8J9jz-OgdfI"
+            "\ud83c\udf99 https://www.youtube.com/watch?v=8J9jz-OgdfI",
+            "\ud83c\udf99 In Spiderman (2002), A bed ridden Aunt may yells Peter that \u201che\u2019s not Superman\u201d. This is due to the fact that Peter is in fact, not Superman."
         ],
         "server" : null,
-        "triggered" : 368,
+        "triggered" : 375,
         "triggered_by" : "^([bB]ucket )?[Ff]acts$",
         "type" : "random"
     },
@@ -201,7 +202,7 @@
             "I BANGED LADESH!"
         ],
         "server" : "124680630075260928",
-        "triggered" : 137,
+        "triggered" : 141,
         "triggered_by" : "^[wW]hat (else )?did [iI] miss\\??$",
         "type" : "random"
     },
@@ -562,10 +563,11 @@
             "https://www.youtube.com/watch?v=cNqkWeWA-QI",
             "https://www.youtube.com/watch?v=LPpgxBkDYfY",
             "https://soundcloud.com/tinywaves/tenkitsune-klonoa-phantomile",
-            "https://soundcloud.com/hilliard_casey/rewritten"
+            "https://soundcloud.com/hilliard_casey/rewritten",
+            "https://www.youtube.com/watch?v=DGqNOWi-wk0"
         ],
         "server" : "124680630075260928",
-        "triggered" : 85,
+        "triggered" : 90,
         "triggered_by" : "give me a jam",
         "type" : "random"
     },
@@ -1660,7 +1662,7 @@
             "https://www.youtube.com/watch?v=mg4FzuBNvdE"
         ],
         "server" : "124680630075260928",
-        "triggered" : 4,
+        "triggered" : 6,
         "triggered_by" : "pizzaaaa+",
         "type" : "all"
     },
@@ -1907,7 +1909,7 @@
             "TedHubish's fursona is jon Arbuckle."
         ],
         "server" : "124680630075260928",
-        "triggered" : 43,
+        "triggered" : 44,
         "triggered_by" : "^([hH]ey )?([tT]ed([hH]ubish)?|<@104004382516867072>)$",
         "type" : "random"
     },
