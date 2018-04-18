@@ -70,7 +70,7 @@
             "\ud83c\udf99 In Spiderman (2002), A bed ridden Aunt may yells Peter that \u201che\u2019s not Superman\u201d. This is due to the fact that Peter is in fact, not Superman."
         ],
         "server" : null,
-        "triggered" : 375,
+        "triggered" : 378,
         "triggered_by" : "^([bB]ucket )?[Ff]acts$",
         "type" : "random"
     },
@@ -199,10 +199,12 @@
             "You Died",
             "Those alien bastards are gonna pay for shooting up my parents https://www.youtube.com/watch?v=ufVXscKNkZs",
             "file: simpsons-imgaynow.jpg",
-            "I BANGED LADESH!"
+            "I BANGED LADESH!",
+            "https://pbs.twimg.com/media/DO6Uu6ZXcAA28cl.jpg:large",
+            "Here's the chat you missed. https://youtu.be/4F0Mer4kDDY"
         ],
         "server" : "124680630075260928",
-        "triggered" : 141,
+        "triggered" : 145,
         "triggered_by" : "^[wW]hat (else )?did [iI] miss\\??$",
         "type" : "random"
     },
@@ -564,10 +566,11 @@
             "https://www.youtube.com/watch?v=LPpgxBkDYfY",
             "https://soundcloud.com/tinywaves/tenkitsune-klonoa-phantomile",
             "https://soundcloud.com/hilliard_casey/rewritten",
-            "https://www.youtube.com/watch?v=DGqNOWi-wk0"
+            "https://www.youtube.com/watch?v=DGqNOWi-wk0",
+            "https://clips.twitch.tv/SucculentPerfectEmuPanicVis"
         ],
         "server" : "124680630075260928",
-        "triggered" : 90,
+        "triggered" : 93,
         "triggered_by" : "give me a jam",
         "type" : "random"
     },
@@ -1808,7 +1811,7 @@
             "**KcH's** fursona is a fish."
         ],
         "server" : "124680630075260928",
-        "triggered" : 6,
+        "triggered" : 7,
         "triggered_by" : "^([hH]ey )?([kK]c[hH]?|<@217865688868585473>|[cC]asey)$",
         "type" : "random"
     },
@@ -1909,7 +1912,7 @@
             "TedHubish's fursona is jon Arbuckle."
         ],
         "server" : "124680630075260928",
-        "triggered" : 44,
+        "triggered" : 45,
         "triggered_by" : "^([hH]ey )?([tT]ed([hH]ubish)?|<@104004382516867072>)$",
         "type" : "random"
     },
@@ -2055,7 +2058,7 @@
             "http://66.media.tumblr.com/cf10c93099f61d1d7d173b0623f8c84d/tumblr_n3sh2bbTQJ1qz4mo8o1_500.jpg"
         ],
         "server" : "124680630075260928",
-        "triggered" : 2,
+        "triggered" : 3,
         "triggered_by" : "^([hH]ey )?([sS]picy(rab)?|<@190729135771877376>)$",
         "type" : "random"
     },
@@ -2122,7 +2125,7 @@
             "Phil is the problem."
         ],
         "server" : "124680630075260928",
-        "triggered" : 10,
+        "triggered" : 11,
         "triggered_by" : "^([hH]ey )?([pP]hil|[vV]idvisionify|<@64612757739147264>)$",
         "type" : "random"
     },
@@ -2422,7 +2425,7 @@
         ],
         "server" : "124680630075260928",
         "triggered" : 0,
-        "triggered_by" : "^([hH]ey )?([bB]uck(et)?)|<@250947682758164491>|)$",
+        "triggered_by" : "^([hH]ey )?([bB]ucket|<@250947682758164491>)$",
         "type" : "random"
     },
     {
@@ -2476,11 +2479,15 @@
             "You know what they say: 3 gallons of eggs a day will probably make you sick eventually.",
             "Revenge is a dish best served warm, but I'm going to take it cold if it's the only option available.",
             "You probably shouldn\u2019t wear a knife as a hat.",
-            "\ud83d\udeaa This is a door. It leads to drugs. So don\u2019t ever open any doors ever."
+            "\ud83d\udeaa This is a door. It leads to drugs. So don\u2019t ever open any doors ever.",
+            "Science is useless and will make you die. This is a lesson you can apply to your schoolyard politics.",
+            "An oft-forgotten Zelda game: \u201cZelda: Link remembers to shave and lives to regret it for the rest of his life\u201d",
+            "Man, I don\u2019t understand - y'know, all my friends, they\u2019re having all these troubles getting eaten by plants - just don\u2019t get eaten by a plant!",
+            "This episode... is about coughing to death while putting your tap-tap in the back-back."
         ],
         "server" : "124680630075260928",
-        "triggered" : 0,
-        "triggered_by" : "Give me a raocowism",
+        "triggered" : 6,
+        "triggered_by" : "raocowisms",
         "type" : "random"
     },
     {
@@ -2499,7 +2506,7 @@
         "type" : "all"
     },
     {
-        "active" : false,
+        "active" : true,
         "case_sensitive" : false,
         "cooldown" : 1,
         "name" : "bucketprotips",
@@ -2562,7 +2569,7 @@
             "Buy half as much food as you usually would - you'll save so much, you can afford to buy twice as much!"
         ],
         "server" : "124680630075260928",
-        "triggered" : 0,
+        "triggered" : 2,
         "triggered_by" : "help",
         "type" : "random"
     }
