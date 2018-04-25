@@ -70,7 +70,7 @@
             "\ud83c\udf99 In Spiderman (2002), A bed ridden Aunt may yells Peter that \u201che\u2019s not Superman\u201d. This is due to the fact that Peter is in fact, not Superman."
         ],
         "server" : null,
-        "triggered" : 378,
+        "triggered" : 392,
         "triggered_by" : "^([bB]ucket )?[Ff]acts$",
         "type" : "random"
     },
@@ -201,10 +201,42 @@
             "file: simpsons-imgaynow.jpg",
             "I BANGED LADESH!",
             "https://pbs.twimg.com/media/DO6Uu6ZXcAA28cl.jpg:large",
-            "Here's the chat you missed. https://youtu.be/4F0Mer4kDDY"
+            "Here's the chat you missed. https://youtu.be/4F0Mer4kDDY",
+            "I'm batting 1000 and nailing everyone",
+            "We've got a small family business, and the family won't like this...",
+            "https://twitter.com/demonsthenes13/status/987595333399015424",
+            "Bad animation.",
+            "Pugs and hugs.",
+            "Another community member became a furry.",
+            "Scott Pilgrim vs. the World: The Game",
+            "The Great Kermit War.",
+            "An orgy for one.",
+            "The Wrong Question of the Day.",
+            "Bitter and full of glitter",
+            "Channel Awesome's apology",
+            "Bees. \ud83d\udc1d",
+            "The main storyline.",
+            "Seahorses rule the earth now. \ud83c\udf0a",
+            "A dancing spinoff of a 10 year old game",
+            "https://pbs.twimg.com/media/DZOwaVZU0AAU1js.jpg",
+            "Aurora Borealis.",
+            "Kittens in mittens.",
+            "Oh thank god you're back, we need a healer",
+            "99 tabs and music is playing in one.",
+            "Phil bought another amiibo.",
+            "Phil added another response to this factoid.",
+            "Run. They cannot be stopped!",
+            "https://twitter.com/madjackrabbit/status/962373612727685121",
+            "The Wii Shop Channel.",
+            "This week's fad game.",
+            "Mcdonalds.",
+            "https://media.discordapp.net/attachments/124680630075260928/398227678764728320/unknown.png",
+            "The house is now sentient.",
+            "23% more puns.",
+            "Kurt touched the ocean's vagina."
         ],
         "server" : "124680630075260928",
-        "triggered" : 145,
+        "triggered" : 159,
         "triggered_by" : "^[wW]hat (else )?did [iI] miss\\??$",
         "type" : "random"
     },
@@ -567,10 +599,12 @@
             "https://soundcloud.com/tinywaves/tenkitsune-klonoa-phantomile",
             "https://soundcloud.com/hilliard_casey/rewritten",
             "https://www.youtube.com/watch?v=DGqNOWi-wk0",
-            "https://clips.twitch.tv/SucculentPerfectEmuPanicVis"
+            "https://clips.twitch.tv/SucculentPerfectEmuPanicVis",
+            "https://www.youtube.com/watch?v=WkbnUi1KRQY",
+            "https://www.youtube.com/watch?v=JQo3ZOO6FG4"
         ],
         "server" : "124680630075260928",
-        "triggered" : 93,
+        "triggered" : 96,
         "triggered_by" : "give me a jam",
         "type" : "random"
     },
@@ -1912,7 +1946,7 @@
             "TedHubish's fursona is jon Arbuckle."
         ],
         "server" : "124680630075260928",
-        "triggered" : 45,
+        "triggered" : 49,
         "triggered_by" : "^([hH]ey )?([tT]ed([hH]ubish)?|<@104004382516867072>)$",
         "type" : "random"
     },
@@ -2125,7 +2159,7 @@
             "Phil is the problem."
         ],
         "server" : "124680630075260928",
-        "triggered" : 11,
+        "triggered" : 12,
         "triggered_by" : "^([hH]ey )?([pP]hil|[vV]idvisionify|<@64612757739147264>)$",
         "type" : "random"
     },
@@ -2267,10 +2301,11 @@
             "**Ash** is a sinful yiffer.",
             "**Ash** has 8 knobs on thier face",
             "Ash is a real Ash",
-            "Ash is gay computer games."
+            "Ash is gay computer games.",
+            "https://pbs.twimg.com/media/Dbl4MZ0WsAAVXt0.jpg:large"
         ],
         "server" : "124680630075260928",
-        "triggered" : 18,
+        "triggered" : 21,
         "triggered_by" : "^([hH]ey )?([aA]sh(deer|leigh)?|<@49345026618036224>)$",
         "type" : "random"
     },
@@ -2333,7 +2368,8 @@
             "Brian has a creamy center.",
             "Brian is both creamy and dreamy.",
             "Brian is a rabbi.",
-            "https://i.imgur.com/oroWWH4.jpg"
+            "https://i.imgur.com/oroWWH4.jpg",
+            "Here's a list of things that Brian likes to suck:"
         ],
         "server" : "124680630075260928",
         "triggered" : 3,
@@ -2486,7 +2522,7 @@
             "This episode... is about coughing to death while putting your tap-tap in the back-back."
         ],
         "server" : "124680630075260928",
-        "triggered" : 6,
+        "triggered" : 14,
         "triggered_by" : "raocowisms",
         "type" : "random"
     },
@@ -2569,7 +2605,7 @@
             "Buy half as much food as you usually would - you'll save so much, you can afford to buy twice as much!"
         ],
         "server" : "124680630075260928",
-        "triggered" : 2,
+        "triggered" : 6,
         "triggered_by" : "help",
         "type" : "random"
     }
