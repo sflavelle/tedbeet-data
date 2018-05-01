@@ -70,7 +70,7 @@
             "\ud83c\udf99 In Spiderman (2002), A bed ridden Aunt may yells Peter that \u201che\u2019s not Superman\u201d. This is due to the fact that Peter is in fact, not Superman."
         ],
         "server" : null,
-        "triggered" : 392,
+        "triggered" : 403,
         "triggered_by" : "^([bB]ucket )?[Ff]acts$",
         "type" : "random"
     },
@@ -233,10 +233,13 @@
             "https://media.discordapp.net/attachments/124680630075260928/398227678764728320/unknown.png",
             "The house is now sentient.",
             "23% more puns.",
-            "Kurt touched the ocean's vagina."
+            "Kurt touched the ocean's vagina.",
+            "https://twitter.com/WEWS/status/988871451452166145",
+            "https://www.youtube.com/watch?v=k8qpafRdfJ8&feature=youtu.be",
+            "https://vtt.tumblr.com/tumblr_p5lq58VgMP1rww79x.mp4"
         ],
         "server" : "124680630075260928",
-        "triggered" : 159,
+        "triggered" : 171,
         "triggered_by" : "^[wW]hat (else )?did [iI] miss\\??$",
         "type" : "random"
     },
@@ -601,10 +604,12 @@
             "https://www.youtube.com/watch?v=DGqNOWi-wk0",
             "https://clips.twitch.tv/SucculentPerfectEmuPanicVis",
             "https://www.youtube.com/watch?v=WkbnUi1KRQY",
-            "https://www.youtube.com/watch?v=JQo3ZOO6FG4"
+            "https://www.youtube.com/watch?v=JQo3ZOO6FG4",
+            "https://www.youtube.com/watch?v=NHZr6P1csiY",
+            "https://www.youtube.com/watch?v=mApiivWF6ko"
         ],
         "server" : "124680630075260928",
-        "triggered" : 96,
+        "triggered" : 97,
         "triggered_by" : "give me a jam",
         "type" : "random"
     },
@@ -1794,14 +1799,14 @@
         "owner" : "206536805997084677",
         "regex" : true,
         "responses" : [
-            "**Henri** is a punk-ass pug.",
-            "**Henri** is a wolf",
-            "**Henri** is the best",
-            "**Henri** is Mr. Robot"
+            "**Harley** is a punk-ass pug.",
+            "**Harley** is a wolf",
+            "**Harley** is the best",
+            "**Harley** is Mr. Robot"
         ],
         "server" : "124680630075260928",
         "triggered" : 0,
-        "triggered_by" : "^([hH]ey )?([hH]enri|<@206536805997084677>|htw)$",
+        "triggered_by" : "^([hH]ey )?([hH]arley|<@206536805997084677>|htw)$",
         "type" : "random"
     },
     {
@@ -1845,7 +1850,7 @@
             "**KcH's** fursona is a fish."
         ],
         "server" : "124680630075260928",
-        "triggered" : 7,
+        "triggered" : 8,
         "triggered_by" : "^([hH]ey )?([kK]c[hH]?|<@217865688868585473>|[cC]asey)$",
         "type" : "random"
     },
@@ -1946,7 +1951,7 @@
             "TedHubish's fursona is jon Arbuckle."
         ],
         "server" : "124680630075260928",
-        "triggered" : 49,
+        "triggered" : 52,
         "triggered_by" : "^([hH]ey )?([tT]ed([hH]ubish)?|<@104004382516867072>)$",
         "type" : "random"
     },
@@ -2159,7 +2164,7 @@
             "Phil is the problem."
         ],
         "server" : "124680630075260928",
-        "triggered" : 12,
+        "triggered" : 14,
         "triggered_by" : "^([hH]ey )?([pP]hil|[vV]idvisionify|<@64612757739147264>)$",
         "type" : "random"
     },
@@ -2302,10 +2307,11 @@
             "**Ash** has 8 knobs on thier face",
             "Ash is a real Ash",
             "Ash is gay computer games.",
-            "https://pbs.twimg.com/media/Dbl4MZ0WsAAVXt0.jpg:large"
+            "https://pbs.twimg.com/media/Dbl4MZ0WsAAVXt0.jpg:large",
+            "https://pbs.twimg.com/media/Dbl5pS6XkAEidPR.jpg:large"
         ],
         "server" : "124680630075260928",
-        "triggered" : 21,
+        "triggered" : 23,
         "triggered_by" : "^([hH]ey )?([aA]sh(deer|leigh)?|<@49345026618036224>)$",
         "type" : "random"
     },
@@ -2491,7 +2497,7 @@
             "anxiety = -311"
         ],
         "server" : "124680630075260928",
-        "triggered" : 1,
+        "triggered" : 2,
         "triggered_by" : "anxiety",
         "type" : "random"
     },
@@ -2522,7 +2528,7 @@
             "This episode... is about coughing to death while putting your tap-tap in the back-back."
         ],
         "server" : "124680630075260928",
-        "triggered" : 14,
+        "triggered" : 17,
         "triggered_by" : "raocowisms",
         "type" : "random"
     },
@@ -2605,7 +2611,7 @@
             "Buy half as much food as you usually would - you'll save so much, you can afford to buy twice as much!"
         ],
         "server" : "124680630075260928",
-        "triggered" : 6,
+        "triggered" : 10,
         "triggered_by" : "help",
         "type" : "random"
     }
