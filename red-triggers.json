@@ -67,10 +67,11 @@
             "\ud83c\udf99 Smiling and laughing increases your chance of failure.",
             "\ud83c\udf99 https://pbs.twimg.com/media/DXYNXPKVwAAeX4u.jpg",
             "\ud83c\udf99 https://www.youtube.com/watch?v=8J9jz-OgdfI",
-            "\ud83c\udf99 In Spiderman (2002), A bed ridden Aunt may yells Peter that \u201che\u2019s not Superman\u201d. This is due to the fact that Peter is in fact, not Superman."
+            "\ud83c\udf99 In Spiderman (2002), A bed ridden Aunt may yells Peter that \u201che\u2019s not Superman\u201d. This is due to the fact that Peter is in fact, not Superman.",
+            "\ud83c\udf99 https://twitter.com/PixlSheep/status/991158311465648129"
         ],
         "server" : null,
-        "triggered" : 403,
+        "triggered" : 406,
         "triggered_by" : "^([bB]ucket )?[Ff]acts$",
         "type" : "random"
     },
@@ -239,7 +240,7 @@
             "https://vtt.tumblr.com/tumblr_p5lq58VgMP1rww79x.mp4"
         ],
         "server" : "124680630075260928",
-        "triggered" : 171,
+        "triggered" : 173,
         "triggered_by" : "^[wW]hat (else )?did [iI] miss\\??$",
         "type" : "random"
     },
@@ -606,10 +607,12 @@
             "https://www.youtube.com/watch?v=WkbnUi1KRQY",
             "https://www.youtube.com/watch?v=JQo3ZOO6FG4",
             "https://www.youtube.com/watch?v=NHZr6P1csiY",
-            "https://www.youtube.com/watch?v=mApiivWF6ko"
+            "https://www.youtube.com/watch?v=mApiivWF6ko",
+            "https://www.youtube.com/watch?v=WNeaJZKm7ww",
+            "https://acerotiburon.tumblr.com/post/166308891143/sing-me-the-song-of-your-people-soup-meow-sing"
         ],
         "server" : "124680630075260928",
-        "triggered" : 97,
+        "triggered" : 98,
         "triggered_by" : "give me a jam",
         "type" : "random"
     },
@@ -1951,7 +1954,7 @@
             "TedHubish's fursona is jon Arbuckle."
         ],
         "server" : "124680630075260928",
-        "triggered" : 52,
+        "triggered" : 53,
         "triggered_by" : "^([hH]ey )?([tT]ed([hH]ubish)?|<@104004382516867072>)$",
         "type" : "random"
     },
@@ -2097,7 +2100,7 @@
             "http://66.media.tumblr.com/cf10c93099f61d1d7d173b0623f8c84d/tumblr_n3sh2bbTQJ1qz4mo8o1_500.jpg"
         ],
         "server" : "124680630075260928",
-        "triggered" : 3,
+        "triggered" : 4,
         "triggered_by" : "^([hH]ey )?([sS]picy(rab)?|<@190729135771877376>)$",
         "type" : "random"
     },
@@ -2528,7 +2531,7 @@
             "This episode... is about coughing to death while putting your tap-tap in the back-back."
         ],
         "server" : "124680630075260928",
-        "triggered" : 17,
+        "triggered" : 19,
         "triggered_by" : "raocowisms",
         "type" : "random"
     },
@@ -2611,7 +2614,7 @@
             "Buy half as much food as you usually would - you'll save so much, you can afford to buy twice as much!"
         ],
         "server" : "124680630075260928",
-        "triggered" : 10,
+        "triggered" : 12,
         "triggered_by" : "help",
         "type" : "random"
     }
