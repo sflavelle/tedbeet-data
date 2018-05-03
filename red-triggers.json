@@ -68,10 +68,28 @@
             "\ud83c\udf99 https://pbs.twimg.com/media/DXYNXPKVwAAeX4u.jpg",
             "\ud83c\udf99 https://www.youtube.com/watch?v=8J9jz-OgdfI",
             "\ud83c\udf99 In Spiderman (2002), A bed ridden Aunt may yells Peter that \u201che\u2019s not Superman\u201d. This is due to the fact that Peter is in fact, not Superman.",
-            "\ud83c\udf99 https://twitter.com/PixlSheep/status/991158311465648129"
+            "\ud83c\udf99 https://twitter.com/PixlSheep/status/991158311465648129",
+            "\ud83c\udf99 https://78.media.tumblr.com/a4daab12cb217986e72f803b18f2fab7/tumblr_o1e3wcx73q1rjjqhuo1_540.jpg",
+            "\ud83c\udf99 You sucked a dick to save Christmas.",
+            "\ud83c\udf99 Your partner might be living inside of you right now...",
+            "\ud83c\udf99 Serena Williams was once having sex on the top of the Sun.",
+            "\ud83c\udf99 A survey of 599 undergraduates found that just 38% of those are North Americans, 10% are Australian, and a barrel.",
+            "\ud83c\udf99 When human pupils dilate, they own us...",
+            "\ud83c\udf99 It's scary how smart or dumb you are.",
+            "\ud83c\udf99 Leonardo Da Vinci could write with one hand and draw with the help of a table or desk.",
+            "\ud83c\udf99 Headaches come from the US.",
+            "\ud83c\udf99 Charles Dickens slept with his yacht's anchor.",
+            "\ud83c\udf99 There exists a speed-run category for Life called Milk%. Many runners only get 2% on this run though. \ud83e\udd5b",
+            "\ud83c\udf99 Rihanna refuses to learn.",
+            "\ud83c\udf99 You can buy happiness--as long as you're spending it on other people.",
+            "\ud83c\udf99 Brad Pitt has a detachable penis that allows him to finish having sex and escape before the female eats him.",
+            "\ud83c\udf99 There were more texting-related car crashes in 2011 than in the entire 14th century.",
+            "\ud83c\udf99 The first trivia contest ever held occurred in 47,000 B.C., and consisted of only two questions, as the total of human knowledge at the time was only two things.",
+            "\ud83c\udf99 Scientists are currently developing artificially intelligent penises that suck themselves and also each other.",
+            "\ud83c\udf99 My greatest dream is a world without \"memes\"."
         ],
         "server" : null,
-        "triggered" : 406,
+        "triggered" : 408,
         "triggered_by" : "^([bB]ucket )?[Ff]acts$",
         "type" : "random"
     },
@@ -1753,11 +1771,12 @@
             "**Eris** felt Mining Woman Woman",
             "Meanwhile, in Neu's dreams: https://www.youtube.com/watch?v=rYE84KgOPXY",
             "Lily is a hoax perpetuated by the government",
-            "Lily is https://78.media.tumblr.com/0c6a75fd791859623ce28d5fb028793a/tumblr_of1x48VYOl1r742p8o1_540.jpg"
+            "Lily is https://78.media.tumblr.com/0c6a75fd791859623ce28d5fb028793a/tumblr_of1x48VYOl1r742p8o1_540.jpg",
+            "Lily is dead https://i.reddituploads.com/a7e41344424e403db734e11f8634770f?fit=max&h=1536&w=1536&s=ac415754458ad0f0f3b9da8a341f55ad"
         ],
         "server" : "124680630075260928",
-        "triggered" : 4,
-        "triggered_by" : "^([hH]ey )?([nN]eurari[oa]|[sS]imon|<@49288117307310080>|[eE]ris)$",
+        "triggered" : 5,
+        "triggered_by" : "^([hH]ey )?([nN]eurari[oa]|[sS]imon|<@49288117307310080>|[eE]ris|[Ll]ily(deer)?)$",
         "type" : "random"
     },
     {
@@ -2614,7 +2633,7 @@
             "Buy half as much food as you usually would - you'll save so much, you can afford to buy twice as much!"
         ],
         "server" : "124680630075260928",
-        "triggered" : 12,
+        "triggered" : 15,
         "triggered_by" : "help",
         "type" : "random"
     }
