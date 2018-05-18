@@ -276,7 +276,7 @@
         "type": "function",
         "z": "c4a38827.e27a18",
         "name": "Discord message",
-        "func": "var items = msg.payload.length-1;\nmsg.randitem = msg.payload[Math.floor(Math.random()*items)];\n\n// Random messages\nvar randmessage = [];\nrandmessage[0] = \"-gives you a brightly wrapped package containing *\" + msg.randitem + \"*.-\";\nrandmessage[1] = \"-hands you *\" + msg.randitem + \"*-\";\nrandmessage[2] = \"-gives you *\" + msg.randitem + \"*-\";\nrandmessage[3] = \"Here then, have *\" + msg.randitem + \"*\";\n\n// Pick one!\nmsg.payload = randmessage[Math.floor(Math.random()*randmessage.length-1)];\n\nmsg.payload = \"Here then, have \" + msg.randitem;\n\nreturn msg;",
+        "func": "var items = msg.payload.length-1;\nmsg.randitem = msg.payload[Math.floor(Math.random()*items)];\n\n// Random messages\nvar randmessage = [];\nrandmessage[0] = \"-gives you a brightly wrapped package containing *\" + msg.randitem + \"*.-\";\nrandmessage[1] = \"-hands you *\" + msg.randitem + \"*-\";\nrandmessage[2] = \"-gives you *\" + msg.randitem + \"*-\";\nrandmessage[3] = \"Here then, have *\" + msg.randitem + \"*\";\n\n// Pick one!\nmsg.payload = randmessage[Math.floor(Math.random()*randmessage.length-1)];\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "x": 1010,
