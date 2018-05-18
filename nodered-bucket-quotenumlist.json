@@ -1,0 +1,104 @@
+[
+    {
+        "id": "b34c3094.579f48",
+        "type": "switch",
+        "z": "c4a38827.e27a18",
+        "name": "Match \"lsquotes\"",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "lsquotes",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 310,
+        "y": 80,
+        "wires": [
+            [
+                "d3ad70ed.fe4dc8"
+            ]
+        ]
+    },
+    {
+        "id": "d687a6.f9448858",
+        "type": "function",
+        "z": "c4a38827.e27a18",
+        "name": "Get the last quote entry, and total quotes",
+        "func": "var length = msg.payload[\"124680630075260928\"].length-1\nvar quotes = msg.payload[\"124680630075260928\"].length\nvar lastquote = msg.payload[\"124680630075260928\"][length]\n\nmsg.payload = \"Looks like I have **\" + quotes + \" quotes** in our database.\\nThe most recent of which is:\\n\\n\" + '\"' + decodeURI(lastquote.text) + '\"\\n—' + lastquote.author_name + \" (quote #\" + quotes + \")\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1000,
+        "y": 80,
+        "wires": [
+            [
+                "895bfbbc.2332"
+            ]
+        ]
+    },
+    {
+        "id": "62061b7.e4869e4",
+        "type": "json",
+        "z": "c4a38827.e27a18",
+        "name": "Convert to JSON object",
+        "property": "payload",
+        "action": "",
+        "pretty": true,
+        "x": 710,
+        "y": 80,
+        "wires": [
+            [
+                "d687a6.f9448858"
+            ]
+        ]
+    },
+    {
+        "id": "d3ad70ed.fe4dc8",
+        "type": "file in",
+        "z": "c4a38827.e27a18",
+        "name": "Read the file",
+        "filename": "/opt/docker-cfg/bucket/Red-DiscordBot/data/serverquotes/quotes.json",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "x": 510,
+        "y": 80,
+        "wires": [
+            [
+                "62061b7.e4869e4"
+            ]
+        ]
+    },
+    {
+        "id": "43893580.2fc644",
+        "type": "link in",
+        "z": "c4a38827.e27a18",
+        "name": "",
+        "links": [
+            "bb2c67ed.b217b8"
+        ],
+        "x": 175,
+        "y": 80,
+        "wires": [
+            [
+                "b34c3094.579f48"
+            ]
+        ]
+    },
+    {
+        "id": "895bfbbc.2332",
+        "type": "link out",
+        "z": "c4a38827.e27a18",
+        "name": "",
+        "links": [
+            "950003c4.e4427"
+        ],
+        "x": 1195,
+        "y": 80,
+        "wires": []
+    }
+]
