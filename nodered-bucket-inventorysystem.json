@@ -117,7 +117,8 @@
                 "e6e1c489.160618",
                 "6a56f10c.d8af18",
                 "8972ff52.fdb57",
-                "75f3a7fc.b54d68"
+                "75f3a7fc.b54d68",
+                "f1e169bb.2b3a"
             ]
         ]
     },
@@ -221,7 +222,7 @@
         "z": "c4a38827.e27a18",
         "name": "Give out an item",
         "property": "payload",
-        "filter": "give me (a present|an item|something)",
+        "filter": "(gimme|give me) (a present|an item|something)",
         "ignorecase": true,
         "x": 340,
         "y": 580,
@@ -588,6 +589,191 @@
         "wires": [
             [
                 "3cf00799.0727b"
+            ]
+        ]
+    },
+    {
+        "id": "4c4831fa.8eafa",
+        "type": "file in",
+        "z": "c4a38827.e27a18",
+        "name": "Read inventory file",
+        "filename": "/home/homeassistant/nodered-bucketinventory.json",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "x": 730,
+        "y": 720,
+        "wires": [
+            [
+                "e2068b84.81fff8"
+            ]
+        ]
+    },
+    {
+        "id": "e2068b84.81fff8",
+        "type": "string",
+        "z": "c4a38827.e27a18",
+        "name": "Split into an array",
+        "methods": [
+            {
+                "name": "lines",
+                "params": []
+            }
+        ],
+        "prop": "payload",
+        "propout": "itemlist",
+        "object": "msg",
+        "objectout": "msg",
+        "x": 930,
+        "y": 720,
+        "wires": [
+            [
+                "79eceaf6.4d994c"
+            ]
+        ]
+    },
+    {
+        "id": "f1e169bb.2b3a",
+        "type": "filter",
+        "z": "c4a38827.e27a18",
+        "name": "Remove an item",
+        "property": "payload",
+        "filter": "delitem",
+        "ignorecase": true,
+        "x": 340,
+        "y": 720,
+        "wires": [
+            [
+                "373e027e.f9bd46"
+            ]
+        ]
+    },
+    {
+        "id": "373e027e.f9bd46",
+        "type": "string",
+        "z": "c4a38827.e27a18",
+        "name": "Extract item",
+        "methods": [
+            {
+                "name": "delLeftMost",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": "delitem "
+                    }
+                ]
+            }
+        ],
+        "prop": "payload",
+        "propout": "delitem",
+        "object": "msg",
+        "objectout": "msg",
+        "x": 530,
+        "y": 720,
+        "wires": [
+            [
+                "4c4831fa.8eafa"
+            ]
+        ]
+    },
+    {
+        "id": "4c7bf4f8.70748c",
+        "type": "file",
+        "z": "c4a38827.e27a18",
+        "name": "",
+        "filename": "/home/homeassistant/nodered-bucketinventory.json",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "true",
+        "x": 1750,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "79eceaf6.4d994c",
+        "type": "function",
+        "z": "c4a38827.e27a18",
+        "name": "Attempt remove item",
+        "func": "var itemlist = msg.itemlist;\nvar delitem = msg.delitem;\n\nvar delindex = itemlist.indexOf(delitem);\nif (delindex > -1) {\n  itemlist.splice(delindex, 1);\n  msg.payload = itemlist.toString();\n  return [msg, null];\n} else {\n    msg.payload = \"I don't know that item.\";\n    return [null, msg];\n}\n",
+        "outputs": 2,
+        "noerr": 0,
+        "x": 1140,
+        "y": 720,
+        "wires": [
+            [
+                "18c6af3f.3e9be1",
+                "8b9aec6b.a86a5"
+            ],
+            [
+                "3cf00799.0727b"
+            ]
+        ],
+        "outputLabels": [
+            "Removed duplicate",
+            "no duplicate"
+        ]
+    },
+    {
+        "id": "18c6af3f.3e9be1",
+        "type": "function",
+        "z": "c4a38827.e27a18",
+        "name": "Discord message",
+        "func": "// Pick one!\nmsg.payload = \"OK, removed *\" + msg.delitem + \"* from my inventory.\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1450,
+        "y": 740,
+        "wires": [
+            [
+                "3cf00799.0727b"
+            ]
+        ]
+    },
+    {
+        "id": "8b9aec6b.a86a5",
+        "type": "function",
+        "z": "c4a38827.e27a18",
+        "name": "New item list",
+        "func": "var items = msg.itemlist.length-1;\nmsg.payload = \"\";\nfor (i = 0; i < items; i++) {\n    msg.payload += msg.itemlist[i] + \"\\n\";\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1350,
+        "y": 780,
+        "wires": [
+            [
+                "49d6ed7f.94207c"
+            ]
+        ]
+    },
+    {
+        "id": "49d6ed7f.94207c",
+        "type": "string",
+        "z": "c4a38827.e27a18",
+        "name": "",
+        "methods": [
+            {
+                "name": "replaceAll",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": "\\n\\n"
+                    },
+                    {
+                        "type": "str",
+                        "value": "\\n"
+                    }
+                ]
+            }
+        ],
+        "prop": "payload",
+        "propout": "payload",
+        "object": "msg",
+        "objectout": "msg",
+        "x": 1490,
+        "y": 780,
+        "wires": [
+            [
+                "4c7bf4f8.70748c"
             ]
         ]
     }
