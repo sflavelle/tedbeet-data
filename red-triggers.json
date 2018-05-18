@@ -86,10 +86,14 @@
             "\ud83c\udf99 There were more texting-related car crashes in 2011 than in the entire 14th century.",
             "\ud83c\udf99 The first trivia contest ever held occurred in 47,000 B.C., and consisted of only two questions, as the total of human knowledge at the time was only two things.",
             "\ud83c\udf99 Scientists are currently developing artificially intelligent penises that suck themselves and also each other.",
-            "\ud83c\udf99 My greatest dream is a world without \"memes\"."
+            "\ud83c\udf99 My greatest dream is a world without \"memes\".",
+            "\ud83c\udf99 You're not overweight, you're undertale.",
+            "\ud83c\udf99 I love PC games. Some of my best friends are PC games!",
+            "\ud83c\udf99 You were born wet.",
+            "\ud83c\udf99 Celery is more complex than Phil's dick."
         ],
         "server" : null,
-        "triggered" : 408,
+        "triggered" : 432,
         "triggered_by" : "^([bB]ucket )?[Ff]acts$",
         "type" : "random"
     },
@@ -193,7 +197,6 @@
             "Church and praying for forgiveness",
             "Came across a video of some dude saying Rest in peace to his old Twitter account because it has died since it was blocked by someone.",
             "https://pbs.twimg.com/media/CYVKO5bWYAANa5i.jpg",
-            "https://twitter.com/BritishLogic/status/685881744059273217",
             "https://pbs.twimg.com/media/CLSVUIfUMAAacC-.jpg:large",
             "I Survived My Baby's First Hashtag",
             "An Incredibly Disturbing Truth About How Bad You Suck",
@@ -255,10 +258,11 @@
             "Kurt touched the ocean's vagina.",
             "https://twitter.com/WEWS/status/988871451452166145",
             "https://www.youtube.com/watch?v=k8qpafRdfJ8&feature=youtu.be",
-            "https://vtt.tumblr.com/tumblr_p5lq58VgMP1rww79x.mp4"
+            "https://vtt.tumblr.com/tumblr_p5lq58VgMP1rww79x.mp4",
+            "https://cdn.discordapp.com/attachments/124680630075260928/442897294350745601/Screen_Shot_2018-05-06_at_8.55.31_PM.png"
         ],
         "server" : "124680630075260928",
-        "triggered" : 173,
+        "triggered" : 196,
         "triggered_by" : "^[wW]hat (else )?did [iI] miss\\??$",
         "type" : "random"
     },
@@ -627,10 +631,16 @@
             "https://www.youtube.com/watch?v=NHZr6P1csiY",
             "https://www.youtube.com/watch?v=mApiivWF6ko",
             "https://www.youtube.com/watch?v=WNeaJZKm7ww",
-            "https://acerotiburon.tumblr.com/post/166308891143/sing-me-the-song-of-your-people-soup-meow-sing"
+            "https://acerotiburon.tumblr.com/post/166308891143/sing-me-the-song-of-your-people-soup-meow-sing",
+            "https://soundcloud.com/kizuuunami/bangarang",
+            "https://www.youtube.com/watch?v=H87GqJujcOk",
+            "https://youtu.be/CH97oY2pZpg",
+            "https://www.youtube.com/watch?v=tG35R8F2j8k",
+            "https://www.youtube.com/watch?v=B5WtVHBD_TU",
+            "https://youtu.be/pBUDfmCO5QA"
         ],
         "server" : "124680630075260928",
-        "triggered" : 98,
+        "triggered" : 102,
         "triggered_by" : "give me a jam",
         "type" : "random"
     },
@@ -1772,7 +1782,8 @@
             "Meanwhile, in Neu's dreams: https://www.youtube.com/watch?v=rYE84KgOPXY",
             "Lily is a hoax perpetuated by the government",
             "Lily is https://78.media.tumblr.com/0c6a75fd791859623ce28d5fb028793a/tumblr_of1x48VYOl1r742p8o1_540.jpg",
-            "Lily is dead https://i.reddituploads.com/a7e41344424e403db734e11f8634770f?fit=max&h=1536&w=1536&s=ac415754458ad0f0f3b9da8a341f55ad"
+            "Lily is dead https://i.reddituploads.com/a7e41344424e403db734e11f8634770f?fit=max&h=1536&w=1536&s=ac415754458ad0f0f3b9da8a341f55ad",
+            "Hey, Lily? https://i.redd.it/mmahswpy2nv01.jpg\n\u2764, Lily"
         ],
         "server" : "124680630075260928",
         "triggered" : 5,
@@ -1809,7 +1820,7 @@
             "http://i.imgur.com/Po2Bqun.png"
         ],
         "server" : "124680630075260928",
-        "triggered" : 2,
+        "triggered" : 3,
         "triggered_by" : "^([hH]ey )?([hH]inchy?|<@138786599033896960>)$",
         "type" : "random"
     },
@@ -1885,9 +1896,6 @@
         "regex" : true,
         "responses" : [
             "SC is living in the past",
-            "SC is a greedy bitch and gets just as much cake as the rest of us.",
-            "SC has a shitty computer, yet keeps buying games.",
-            "SC's computer can't run ANYTHING",
             "SC can finally run Rocket League."
         ],
         "server" : "124680630075260928",
@@ -1973,7 +1981,7 @@
             "TedHubish's fursona is jon Arbuckle."
         ],
         "server" : "124680630075260928",
-        "triggered" : 53,
+        "triggered" : 55,
         "triggered_by" : "^([hH]ey )?([tT]ed([hH]ubish)?|<@104004382516867072>)$",
         "type" : "random"
     },
@@ -2119,7 +2127,7 @@
             "http://66.media.tumblr.com/cf10c93099f61d1d7d173b0623f8c84d/tumblr_n3sh2bbTQJ1qz4mo8o1_500.jpg"
         ],
         "server" : "124680630075260928",
-        "triggered" : 4,
+        "triggered" : 5,
         "triggered_by" : "^([hH]ey )?([sS]picy(rab)?|<@190729135771877376>)$",
         "type" : "random"
     },
@@ -2186,7 +2194,7 @@
             "Phil is the problem."
         ],
         "server" : "124680630075260928",
-        "triggered" : 14,
+        "triggered" : 17,
         "triggered_by" : "^([hH]ey )?([pP]hil|[vV]idvisionify|<@64612757739147264>)$",
         "type" : "random"
     },
@@ -2330,7 +2338,8 @@
             "Ash is a real Ash",
             "Ash is gay computer games.",
             "https://pbs.twimg.com/media/Dbl4MZ0WsAAVXt0.jpg:large",
-            "https://pbs.twimg.com/media/Dbl5pS6XkAEidPR.jpg:large"
+            "https://pbs.twimg.com/media/Dbl5pS6XkAEidPR.jpg:large",
+            "Ash dabs."
         ],
         "server" : "124680630075260928",
         "triggered" : 23,
@@ -2519,7 +2528,7 @@
             "anxiety = -311"
         ],
         "server" : "124680630075260928",
-        "triggered" : 2,
+        "triggered" : 4,
         "triggered_by" : "anxiety",
         "type" : "random"
     },
@@ -2547,10 +2556,27 @@
             "Science is useless and will make you die. This is a lesson you can apply to your schoolyard politics.",
             "An oft-forgotten Zelda game: \u201cZelda: Link remembers to shave and lives to regret it for the rest of his life\u201d",
             "Man, I don\u2019t understand - y'know, all my friends, they\u2019re having all these troubles getting eaten by plants - just don\u2019t get eaten by a plant!",
-            "This episode... is about coughing to death while putting your tap-tap in the back-back."
+            "This episode... is about coughing to death while putting your tap-tap in the back-back.",
+            "The world is filled with mysteries and a lot of them are kinda dumb.",
+            "Wow, that was a freaking trainwreck, but it was at least a very quick trainwreck. It\u2019s the kind of trainwreck where the train just kind of crashes into a volcano and explodes mysteriously.",
+            "The truth behind our dreams is actually 3 ounces of vodka mixed with 3 ounce of paprika. Put it in a blender for a few hours and forget it\u2019s there.",
+            "Hey there everyone, this is Raocow, answering all the important questions, such as \"what is on your face\" and also \"is it edible\".",
+            "I just collide words together and stare at the train wreck.",
+            "Is a man who has voices in his head but can't hear them, crazier than the man who hears them?",
+            "That was a demo, y'know, to see what happens when you're bad at video games.",
+            "Heaven is a very sky place dangerous.",
+            "Oh hey, let's make a ProtonJon reference here. Um. Dane Cook... yeehaw. Okay.",
+            "Man, can you imagine playing Super Mario World romhacks for, like, years and years? With occasional breaks for other games? Talk about bad life choices!",
+            "Oh, there's drills there, you don't want to get drilled to death... It's almost as bad as being bored to death, you could say.",
+            "There's a thing that you put in your mouth and you chew real loud and the guy says OW.\n\nUh, I can't believe I said that... uh, let's... let's hope no one understands that part.",
+            "Oh jeez! Jeez! Jeezing everywhere! ...Ew.",
+            "This is a lot of guys. You have a lot of guys in your throat- ew. That's... that's not something you say to a lady, especially not a goddess lady!",
+            "It's time for action! Running away counts as an action!",
+            "Always be in constant fear of immolation, by anyone and everyone!",
+            "The world exists to be ended / Destroy the world and everything inside"
         ],
         "server" : "124680630075260928",
-        "triggered" : 19,
+        "triggered" : 43,
         "triggered_by" : "raocowisms",
         "type" : "random"
     },
@@ -2633,8 +2659,29 @@
             "Buy half as much food as you usually would - you'll save so much, you can afford to buy twice as much!"
         ],
         "server" : "124680630075260928",
-        "triggered" : 15,
+        "triggered" : 20,
         "triggered_by" : "help",
+        "type" : "random"
+    },
+    {
+        "active" : true,
+        "case_sensitive" : false,
+        "cooldown" : 1,
+        "name" : "battleroyale",
+        "owner" : "49288117307310080",
+        "regex" : false,
+        "responses" : [
+            "100 old men parachute onto a plateau.",
+            "100 Marios parachute onto a party board",
+            "100 lawyers parachute into a courtroom...",
+            "100 Battle Royale games parachute onto Steam...",
+            "100 furries parachute into a macro",
+            "https://twitter.com/GRIMECRAFT/status/996536343185448961",
+            "100 bucks parachute into Ash's mouth"
+        ],
+        "server" : "124680630075260928",
+        "triggered" : 2,
+        "triggered_by" : "battle royale",
         "type" : "random"
     }
 ]
