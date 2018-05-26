@@ -90,10 +90,12 @@
             "\ud83c\udf99 You're not overweight, you're undertale.",
             "\ud83c\udf99 I love PC games. Some of my best friends are PC games!",
             "\ud83c\udf99 You were born wet.",
-            "\ud83c\udf99 Celery is more complex than Phil's dick."
+            "\ud83c\udf99 Celery is more complex than Phil's dick.",
+            "\ud83c\udf99 According to Japanese legend, when you cannot sleep at night, it is because you are awake.",
+            "\ud83c\udf99 https://www.youtube.com/watch?v=CqORW1DsyX0"
         ],
         "server" : null,
-        "triggered" : 433,
+        "triggered" : 436,
         "triggered_by" : "^([bB]ucket )?[Ff]acts$",
         "type" : "random"
     },
@@ -262,7 +264,7 @@
             "https://cdn.discordapp.com/attachments/124680630075260928/442897294350745601/Screen_Shot_2018-05-06_at_8.55.31_PM.png"
         ],
         "server" : "124680630075260928",
-        "triggered" : 202,
+        "triggered" : 206,
         "triggered_by" : "^[wW]hat (else )?did [iI] miss\\??$",
         "type" : "random"
     },
@@ -1785,7 +1787,9 @@
             "Lily is a hoax perpetuated by the government",
             "Lily is https://78.media.tumblr.com/0c6a75fd791859623ce28d5fb028793a/tumblr_of1x48VYOl1r742p8o1_540.jpg",
             "Lily is dead https://i.reddituploads.com/a7e41344424e403db734e11f8634770f?fit=max&h=1536&w=1536&s=ac415754458ad0f0f3b9da8a341f55ad",
-            "Hey, Lily? https://i.redd.it/mmahswpy2nv01.jpg\n\u2764, Lily"
+            "Hey, Lily? https://i.redd.it/mmahswpy2nv01.jpg\n\u2764, Lily",
+            "Lily is a lazy forgetful piece of shit who can\u2019t do anything right.",
+            "Lily is as cold as her heart: not at all"
         ],
         "server" : "124680630075260928",
         "triggered" : 5,
@@ -1885,7 +1889,7 @@
             "**KcH's** fursona is a fish."
         ],
         "server" : "124680630075260928",
-        "triggered" : 8,
+        "triggered" : 10,
         "triggered_by" : "^([hH]ey )?([kK]c[hH]?|<@217865688868585473>|[cC]asey)$",
         "type" : "random"
     },
@@ -1983,7 +1987,7 @@
             "TedHubish's fursona is jon Arbuckle."
         ],
         "server" : "124680630075260928",
-        "triggered" : 55,
+        "triggered" : 56,
         "triggered_by" : "^([hH]ey )?([tT]ed([hH]ubish)?|<@104004382516867072>)$",
         "type" : "random"
     },
@@ -2530,7 +2534,7 @@
             "anxiety = -311"
         ],
         "server" : "124680630075260928",
-        "triggered" : 4,
+        "triggered" : 8,
         "triggered_by" : "anxiety",
         "type" : "random"
     },
@@ -2578,7 +2582,7 @@
             "The world exists to be ended / Destroy the world and everything inside"
         ],
         "server" : "124680630075260928",
-        "triggered" : 47,
+        "triggered" : 52,
         "triggered_by" : "raocowisms",
         "type" : "random"
     },
@@ -2603,7 +2607,7 @@
         "cooldown" : 1,
         "name" : "bucketprotips",
         "owner" : "49288117307310080",
-        "regex" : false,
+        "regex" : true,
         "responses" : [
             "Use your seatbelt to open beers while driving!",
             "Glue a tiny mirror over the picture of you on your driver's licence so when you hand it to the police, they get confused and arrest themselves instead.",
@@ -2661,8 +2665,8 @@
             "Buy half as much food as you usually would - you'll save so much, you can afford to buy twice as much!"
         ],
         "server" : "124680630075260928",
-        "triggered" : 20,
-        "triggered_by" : "help",
+        "triggered" : 29,
+        "triggered_by" : "^help$",
         "type" : "random"
     },
     {
