@@ -264,7 +264,7 @@
             "https://cdn.discordapp.com/attachments/124680630075260928/442897294350745601/Screen_Shot_2018-05-06_at_8.55.31_PM.png"
         ],
         "server" : "124680630075260928",
-        "triggered" : 206,
+        "triggered" : 207,
         "triggered_by" : "^[wW]hat (else )?did [iI] miss\\??$",
         "type" : "random"
     },
@@ -2199,7 +2199,7 @@
             "Phil is the problem."
         ],
         "server" : "124680630075260928",
-        "triggered" : 17,
+        "triggered" : 18,
         "triggered_by" : "^([hH]ey )?([pP]hil|[vV]idvisionify|<@64612757739147264>)$",
         "type" : "random"
     },
@@ -2700,7 +2700,7 @@
             "Sam is a froad."
         ],
         "server" : "124680630075260928",
-        "triggered" : 3,
+        "triggered" : 5,
         "triggered_by" : "^([hH]ey )?(sam|<@186902083021045762>)$",
         "type" : "random"
     }
