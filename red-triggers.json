@@ -92,10 +92,27 @@
             "\ud83c\udf99 You were born wet.",
             "\ud83c\udf99 Celery is more complex than Phil's dick.",
             "\ud83c\udf99 According to Japanese legend, when you cannot sleep at night, it is because you are awake.",
-            "\ud83c\udf99 https://www.youtube.com/watch?v=CqORW1DsyX0"
+            "\ud83c\udf99 https://www.youtube.com/watch?v=CqORW1DsyX0",
+            "\ud83c\udf99 https://twitter.com/simpleflips/status/1003177983270576128?s=21",
+            "\ud83c\udf99 I believe it was Benjamin Franklin who said, \"*you have reached the end of your free trial at BenjaminFranklinQuotes.com*\".",
+            "\ud83c\udf99 In the old days of Feudal Japan, a samurai warrior would shout, \"You are trying to view Flash content, but you have no Flash plugin installed\".",
+            "\ud83c\udf99 **Your sound card works perfectly!**",
+            "\ud83c\udf99 **I AM YOUR CHARACTER ARC**",
+            "https://pbs.twimg.com/media/DhcsZGpUYAACD0w.jpg:orig",
+            "https://pbs.twimg.com/media/DhfFhXpV4AIf0Df.jpg:orig",
+            "https://pbs.twimg.com/media/Dhl16VeW0AEdikk.jpg:orig",
+            "https://pbs.twimg.com/media/DhY_46CW0AIfDr2.jpg:orig",
+            "https://pbs.twimg.com/media/DhOLdL6V4AAIZnT.jpg:orig",
+            "https://pbs.twimg.com/media/DgajxDAX0AAnZIq.jpg:orig",
+            "https://pbs.twimg.com/media/DgVcOS3VQAEOc8X.jpg:orig",
+            "https://pbs.twimg.com/media/DgaGWSeVAAAIKqZ.jpg:orig",
+            "https://pbs.twimg.com/media/DgFJ4kKXcAAc2d2.jpg:orig",
+            "https://pbs.twimg.com/media/Df7LY6cUwAA_1D8.jpg:orig",
+            "https://pbs.twimg.com/media/DekthL8U0AAUlt-.jpg:orig",
+            "https://pbs.twimg.com/media/De4mH9bUcAABTi-.jpg:orig"
         ],
         "server" : null,
-        "triggered" : 436,
+        "triggered" : 479,
         "triggered_by" : "^([bB]ucket )?[Ff]acts$",
         "type" : "random"
     },
@@ -179,7 +196,6 @@
             "https://www.youtube.com/watch?v=enb0zWbYUik",
             "Ed, Edd, n' Eddy and the Oppressive USSR",
             "professor layton and phoenix wright finds a letter from an old friend: sonic the hedgehog, he said that his son works in a pizzeria",
-            "fuck you bitch your in asshole and by the way i am six your story is freaken lame gay ass. Your a quitter you probably always quit bitch ass",
             "I mean, i never thought sombody would write a iCarly Call of Duty crossover. i was just looking it up as a joke.",
             "I found pills. https://www.youtube.com/watch?v=gjvFLuJFkgU",
             "Team Fortress 3 was leaked!",
@@ -261,10 +277,14 @@
             "https://twitter.com/WEWS/status/988871451452166145",
             "https://www.youtube.com/watch?v=k8qpafRdfJ8&feature=youtu.be",
             "https://vtt.tumblr.com/tumblr_p5lq58VgMP1rww79x.mp4",
-            "https://cdn.discordapp.com/attachments/124680630075260928/442897294350745601/Screen_Shot_2018-05-06_at_8.55.31_PM.png"
+            "https://cdn.discordapp.com/attachments/124680630075260928/442897294350745601/Screen_Shot_2018-05-06_at_8.55.31_PM.png",
+            "https://i.redditmedia.com/WMBySPO4JTaHZZdQgiK3VvJnuvYZHhJYijA0vEbohOg.png?s=e165a16071440913b343b07b734f4472",
+            "Actually, we missed you. https://twitter.com/SegaCDgames/status/1014231441088172032",
+            "https://twitter.com/Kosan_Takeuchi/status/1016672810976997377",
+            "https://i.imgur.com/CSXC6Rx.png"
         ],
         "server" : "124680630075260928",
-        "triggered" : 207,
+        "triggered" : 259,
         "triggered_by" : "^[wW]hat (else )?did [iI] miss\\??$",
         "type" : "random"
     },
@@ -640,10 +660,18 @@
             "https://www.youtube.com/watch?v=B5WtVHBD_TU",
             "https://youtu.be/pBUDfmCO5QA",
             "im too high for this",
-            "https://youtu.be/t2M5JmGqsSc i was gonna add this"
+            "https://youtu.be/t2M5JmGqsSc i was gonna add this",
+            "https://soundcloud.com/sslps/cut-the-squid",
+            "https://soundcloud.com/blindedm/depeche-mode-peace-blind-remix",
+            "https://soundcloud.com/mhredox/seeyousoon",
+            "https://youtu.be/QtZT7hcMltg",
+            "https://www.youtube.com/watch?v=zkraNj6ZlFM",
+            "https://www.youtube.com/watch?v=EgOGxPHV3QE",
+            "https://www.youtube.com/watch?v=BFNe98k-pUk",
+            "https://open.spotify.com/track/3P64cFlI640oYUEYzmBMZi?si=cjOnQHVvQeGutZXeDo008A"
         ],
         "server" : "124680630075260928",
-        "triggered" : 103,
+        "triggered" : 109,
         "triggered_by" : "give me a jam",
         "type" : "random"
     },
@@ -674,7 +702,7 @@
             "Sierra."
         ],
         "server" : "124680630075260928",
-        "triggered" : 29,
+        "triggered" : 30,
         "triggered_by" : "phew",
         "type" : "all"
     },
@@ -1723,7 +1751,7 @@
             "DEER ARE THE OVERLORDS. OBEY."
         ],
         "server" : "124680630075260928",
-        "triggered" : 13,
+        "triggered" : 14,
         "triggered_by" : "^(deer(deerdeer)?)$",
         "type" : "random"
     },
@@ -1788,10 +1816,11 @@
             "Lily is dead https://i.reddituploads.com/a7e41344424e403db734e11f8634770f?fit=max&h=1536&w=1536&s=ac415754458ad0f0f3b9da8a341f55ad",
             "Hey, Lily? https://i.redd.it/mmahswpy2nv01.jpg\n\u2764, Lily",
             "Lily is a lazy forgetful piece of shit who can\u2019t do anything right.",
-            "Lily is as cold as her heart: not at all"
+            "Lily is as cold as her heart: not at all",
+            "Lily is off cursing down the highway."
         ],
         "server" : "124680630075260928",
-        "triggered" : 5,
+        "triggered" : 6,
         "triggered_by" : "^([hH]ey )?([nN]eurari[oa]|[sS]imon|<@49288117307310080>|[eE]ris|[Ll]ily(deer)?)$",
         "type" : "random"
     },
@@ -1888,7 +1917,7 @@
             "**KcH's** fursona is a fish."
         ],
         "server" : "124680630075260928",
-        "triggered" : 10,
+        "triggered" : 12,
         "triggered_by" : "^([hH]ey )?([kK]c[hH]?|<@217865688868585473>|[cC]asey)$",
         "type" : "random"
     },
@@ -1986,7 +2015,7 @@
             "TedHubish's fursona is jon Arbuckle."
         ],
         "server" : "124680630075260928",
-        "triggered" : 56,
+        "triggered" : 62,
         "triggered_by" : "^([hH]ey )?([tT]ed([hH]ubish)?|<@104004382516867072>)$",
         "type" : "random"
     },
@@ -2093,10 +2122,11 @@
             "tobi's fursona is a cockatrice",
             "Tobi's fursona is Kermit.",
             "tobi's fursona is cat",
-            "tobi's fursona is a cat"
+            "tobi's fursona is a cat",
+            "tobi is bread"
         ],
         "server" : "124680630075260928",
-        "triggered" : 5,
+        "triggered" : 7,
         "triggered_by" : "^([hH]ey )?([tT]obi?|<@104679344806309888>)$",
         "type" : "random"
     },
@@ -2199,7 +2229,7 @@
             "Phil is the problem."
         ],
         "server" : "124680630075260928",
-        "triggered" : 18,
+        "triggered" : 23,
         "triggered_by" : "^([hH]ey )?([pP]hil|[vV]idvisionify|<@64612757739147264>)$",
         "type" : "random"
     },
@@ -2347,7 +2377,7 @@
             "Ash dabs."
         ],
         "server" : "124680630075260928",
-        "triggered" : 23,
+        "triggered" : 28,
         "triggered_by" : "^([hH]ey )?([aA]sh(deer|leigh)?|<@49345026618036224>)$",
         "type" : "random"
     },
@@ -2414,7 +2444,7 @@
             "Here's a list of things that Brian likes to suck:"
         ],
         "server" : "124680630075260928",
-        "triggered" : 3,
+        "triggered" : 4,
         "triggered_by" : "^([hH]ey )?([bB]ri(an|guy)?|<@78316152614301696>)$",
         "type" : "random"
     },
@@ -2502,12 +2532,12 @@
             "Bucket is a magic trash can."
         ],
         "server" : "124680630075260928",
-        "triggered" : 0,
+        "triggered" : 1,
         "triggered_by" : "^([hH]ey )?([bB]ucket|<@250947682758164491>)$",
         "type" : "random"
     },
     {
-        "active" : true,
+        "active" : false,
         "case_sensitive" : false,
         "cooldown" : 180,
         "name" : "anxiety",
@@ -2533,7 +2563,7 @@
             "anxiety = -311"
         ],
         "server" : "124680630075260928",
-        "triggered" : 8,
+        "triggered" : 12,
         "triggered_by" : "anxiety",
         "type" : "random"
     },
@@ -2581,7 +2611,7 @@
             "The world exists to be ended / Destroy the world and everything inside"
         ],
         "server" : "124680630075260928",
-        "triggered" : 52,
+        "triggered" : 78,
         "triggered_by" : "raocowisms",
         "type" : "random"
     },
@@ -2664,7 +2694,7 @@
             "Buy half as much food as you usually would - you'll save so much, you can afford to buy twice as much!"
         ],
         "server" : "124680630075260928",
-        "triggered" : 29,
+        "triggered" : 31,
         "triggered_by" : "^help$",
         "type" : "random"
     },
@@ -2685,7 +2715,7 @@
             "100 bucks parachute into Ash's mouth"
         ],
         "server" : "124680630075260928",
-        "triggered" : 2,
+        "triggered" : 6,
         "triggered_by" : "battle royale",
         "type" : "random"
     },
@@ -2700,7 +2730,7 @@
             "Sam is a froad."
         ],
         "server" : "124680630075260928",
-        "triggered" : 5,
+        "triggered" : 13,
         "triggered_by" : "^([hH]ey )?(sam|<@186902083021045762>)$",
         "type" : "random"
     }
