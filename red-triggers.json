@@ -117,10 +117,11 @@
             "\ud83c\udf99 https://78.media.tumblr.com/tumblr_mchaxhLm1j1rehruqo1_500.png",
             "\ud83c\udf99 https://twitter.com/OTHpearlbot/status/1038712090347753472",
             "\ud83c\udf99 https://twitter.com/OTHmarinabot/status/1038244003290918912",
-            "\ud83c\udf99 https://twitter.com/jeffgerstmann/status/1040051375147601920"
+            "\ud83c\udf99 https://twitter.com/jeffgerstmann/status/1040051375147601920",
+            ":microphone2: https://pbs.twimg.com/media/DnH1VBBVAAAfKvC.jpg:orig"
         ],
         "server" : null,
-        "triggered" : 615,
+        "triggered" : 635,
         "triggered_by" : "^([bB]ucket )?[Ff]acts$",
         "type" : "random"
     },
@@ -301,7 +302,7 @@
             "https://i.imgur.com/vr2VNx0.png"
         ],
         "server" : "124680630075260928",
-        "triggered" : 349,
+        "triggered" : 361,
         "triggered_by" : "^[wW]hat (else )?did [iI] miss\\??$",
         "type" : "random"
     },
@@ -2329,7 +2330,7 @@
             "Phil is the problem."
         ],
         "server" : "124680630075260928",
-        "triggered" : 28,
+        "triggered" : 29,
         "triggered_by" : "^([hH]ey )?([pP]hil|[vV]idvisionify|<@64612757739147264>)$",
         "type" : "random"
     },
@@ -2729,7 +2730,7 @@
             "Let me appreciate... you... the subtle strategy that plays here- DIEDIEDIEDIEDIEDIEDIEDIEDIEDIEDIEDIEDIEDIE! Phew!"
         ],
         "server" : "124680630075260928",
-        "triggered" : 146,
+        "triggered" : 156,
         "triggered_by" : "raocowisms",
         "type" : "random"
     },
@@ -2749,7 +2750,7 @@
         "type" : "all"
     },
     {
-        "active" : true,
+        "active" : false,
         "case_sensitive" : false,
         "cooldown" : 1,
         "name" : "bucketprotips",
@@ -2812,7 +2813,7 @@
             "Buy half as much food as you usually would - you'll save so much, you can afford to buy twice as much!"
         ],
         "server" : "124680630075260928",
-        "triggered" : 32,
+        "triggered" : 33,
         "triggered_by" : "^help$",
         "type" : "random"
     },
@@ -2931,10 +2932,16 @@
             "https://twitter.com/cheesedoggers/status/1037010597798244352",
             "https://twitter.com/cheesedoggers/status/1037008007089942528",
             "https://twitter.com/Rocktopus__/status/1036472621855059968",
-            "https://twitter.com/dbMisadventure/status/1036417789429538817"
+            "https://twitter.com/dbMisadventure/status/1036417789429538817",
+            "https://twitter.com/ns_maxd/status/1040779277145321472",
+            "https://twitter.com/ns_maxd/status/1040961593700302848",
+            "https://pbs.twimg.com/media/DnL3qp4U0AA_aZP.jpg:orig",
+            "https://i.redd.it/hi10m1dvdnm11.jpg",
+            "https://i.redd.it/wyxbaj4axtm11.jpg",
+            "https://pbs.twimg.com/media/Dk4gF81XsAAjb_P.jpg:orig"
         ],
         "server" : "124680630075260928",
-        "triggered" : 83,
+        "triggered" : 97,
         "triggered_by" : "^((give me|gimme) (a )?(squid|octo)s?|\ud83e\udd91\ud83d\udcf7|(squid|octo) ?facts)$",
         "type" : "random"
     }
