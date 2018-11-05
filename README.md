@@ -4,6 +4,11 @@ Configuration files for various bots we use in our Discord server. This is not o
 
 Our main Discord bot is called Bucket (a callback to our IRC bot of choice, courtesy of [XKCD's IRC channel](https://github.com/zigdon/xkcd-Bucket/)).
 
+A quick primer:
+
+- **red-** prefixed items are used with the [Red-DiscordBot](https://github.com/Cog-Creators/Red-DiscordBot) software.
+- **nodered-** prefixed items are usually Node-RED flows. You can copy and import the data into your own Node-RED software to see how it works. (Sensitive data, like server details and bot tokens, are omitted.)
+
 Our most noteworthy files are [red-serverquotes.json](red-serverquotes.json) and [red-triggers.json](red-triggers.json) - they contain the most expression of ourselves.
 
 Many of these files store the unique data for our server for perusal, however there are four files that can be used freely:
