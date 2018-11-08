@@ -1,6 +1,6 @@
 [
     {
-        "id": "e19b6959.01ea1",
+        "id": "d68fb564.ebfdd",
         "type": "subflow",
         "name": "Bucket Information Line",
         "info": "",
@@ -10,34 +10,38 @@
                 "y": 226.42861938476562,
                 "wires": [
                     {
-                        "id": "84285ae7.1a4a78"
+                        "id": "f65d4dc7.a05918"
                     }
                 ]
             }
         ],
         "out": [
             {
-                "x": 1840,
-                "y": 580,
+                "x": 1620,
+                "y": 600,
                 "wires": [
                     {
-                        "id": "5a8a4d5e.080514",
+                        "id": "e577f122.480698",
                         "port": 0
                     },
                     {
-                        "id": "115de2c8.c8a68d",
+                        "id": "b4cb424a.e1df5",
                         "port": 0
                     },
                     {
-                        "id": "4708cba7.6ffa6c",
+                        "id": "54558a2a.a4fcb4",
                         "port": 0
                     },
                     {
-                        "id": "ed20d791.a0b598",
+                        "id": "4c70dd1f.3ed8b4",
                         "port": 0
                     },
                     {
-                        "id": "cf3c3643.0a9978",
+                        "id": "685bb8fd.e4f91",
+                        "port": 0
+                    },
+                    {
+                        "id": "1d7174f9.6426cb",
                         "port": 0
                     }
                 ]
@@ -45,11 +49,11 @@
         ]
     },
     {
-        "id": "befe847d.4b8ea8",
+        "id": "51c75f62.84f98",
         "type": "file in",
-        "z": "e19b6959.01ea1",
+        "z": "d68fb564.ebfdd",
         "name": "Read the file",
-        "filename": "/opt/docker-cfg/bucket/Red-DiscordBot/data/serverquotes/quotes.json",
+        "filename": "/data/redbot/quotes.json",
         "format": "utf8",
         "chunk": false,
         "sendError": false,
@@ -57,14 +61,14 @@
         "y": 260,
         "wires": [
             [
-                "5a51d1c8.a5c4b"
+                "ed5597b2.0c29e8"
             ]
         ]
     },
     {
-        "id": "5a51d1c8.a5c4b",
+        "id": "ed5597b2.0c29e8",
         "type": "json",
-        "z": "e19b6959.01ea1",
+        "z": "d68fb564.ebfdd",
         "name": "Convert to JSON object",
         "property": "payload",
         "action": "",
@@ -73,16 +77,16 @@
         "y": 261,
         "wires": [
             [
-                "5a8a4d5e.080514"
+                "4c70dd1f.3ed8b4"
             ]
         ]
     },
     {
-        "id": "5a8a4d5e.080514",
+        "id": "4c70dd1f.3ed8b4",
         "type": "function",
-        "z": "e19b6959.01ea1",
+        "z": "d68fb564.ebfdd",
         "name": "Get a random quote",
-        "func": "var length = msg.payload[\"124680630075260928\"].length-1\nvar quotes = msg.payload[\"124680630075260928\"].length\nvar randquote = msg.payload[\"124680630075260928\"][Math.floor(Math.random()*quotes)]\n\nmsg.payload = '\"' + decodeURI(randquote.text) + '\"\\n—' + randquote.author_name;\nreturn msg;",
+        "func": "var length = msg.payload[\"124680630075260928\"].length-1\nvar quotes = msg.payload[\"124680630075260928\"].length\nvar randquote = msg.payload[\"124680630075260928\"][Math.floor(Math.random()*quotes)]\n\nmsg.payload = '\"' + decodeURI(randquote.text) + '\"\\n—' + randquote.author_name + '\\nWant to immortalize a quote? `Bucket, addquote \"My new gay quote\" @Bucket`';\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "x": 1185.5714416503906,
@@ -93,26 +97,26 @@
         "icon": "node-red/comment.png"
     },
     {
-        "id": "84285ae7.1a4a78",
+        "id": "f65d4dc7.a05918",
         "type": "random",
-        "z": "e19b6959.01ea1",
+        "z": "d68fb564.ebfdd",
         "name": "",
         "low": "1",
-        "high": "5",
+        "high": "6",
         "inte": "true",
         "property": "payload",
         "x": 274.857177734375,
         "y": 226.42861938476562,
         "wires": [
             [
-                "77bb6d7.009d894"
+                "1a50ac6e.077ed4"
             ]
         ]
     },
     {
-        "id": "77bb6d7.009d894",
+        "id": "1a50ac6e.077ed4",
         "type": "switch",
-        "z": "e19b6959.01ea1",
+        "z": "d68fb564.ebfdd",
         "name": "",
         "property": "payload",
         "propertyType": "msg",
@@ -146,38 +150,46 @@
                 "t": "eq",
                 "v": "6",
                 "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "7",
+                "vt": "str"
             }
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 6,
+        "outputs": 7,
         "x": 304,
         "y": 332.14288330078125,
         "wires": [
             [
-                "befe847d.4b8ea8"
+                "51c75f62.84f98"
             ],
             [
-                "f0b25495.1ad6a8"
+                "7d07cfe.381a23"
             ],
             [
-                "301e9555.ec2502"
+                "5a51e555.2b819c"
             ],
             [
-                "8d785181.dbd938"
+                "d0d353f3.c14f28"
             ],
             [
-                "e8fcf665.ae148"
+                "d59fdfd5.2f4438"
+            ],
+            [
+                "c473cfa3.5095c"
             ],
             []
         ]
     },
     {
-        "id": "f0b25495.1ad6a8",
+        "id": "7d07cfe.381a23",
         "type": "file in",
-        "z": "e19b6959.01ea1",
+        "z": "d68fb564.ebfdd",
         "name": "Read the file",
-        "filename": "/opt/docker-cfg/bucket/Red-DiscordBot/data/trigger/triggers.json",
+        "filename": "/data/redbot/triggers.json",
         "format": "utf8",
         "chunk": false,
         "sendError": false,
@@ -185,14 +197,14 @@
         "y": 317,
         "wires": [
             [
-                "81699c96.35941"
+                "b99834a5.4e5488"
             ]
         ]
     },
     {
-        "id": "81699c96.35941",
+        "id": "b99834a5.4e5488",
         "type": "json",
-        "z": "e19b6959.01ea1",
+        "z": "d68fb564.ebfdd",
         "name": "Convert to JSON object",
         "property": "payload",
         "action": "",
@@ -201,16 +213,16 @@
         "y": 318,
         "wires": [
             [
-                "4708cba7.6ffa6c"
+                "e577f122.480698"
             ]
         ]
     },
     {
-        "id": "4708cba7.6ffa6c",
+        "id": "e577f122.480698",
         "type": "function",
-        "z": "e19b6959.01ea1",
+        "z": "d68fb564.ebfdd",
         "name": "Get a random Bucket Fact",
-        "func": "var max = msg.payload[0].responses.length;\nvar rand = msg.payload[0].responses[Math.floor(Math.random()*max)];\n\nmsg.payload = decodeURI(rand)\nreturn msg;",
+        "func": "var max = msg.payload[0].responses.length;\nvar rand = msg.payload[0].responses[Math.floor(Math.random()*max)];\n\nmsg.data = msg.payload[0];\nmsg.payload = decodeURI(rand) + \"\\n\\nGot more totally real facts for me? `Bucket, trigger add facts`\"\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "x": 1202.5000610351562,
@@ -221,27 +233,11 @@
         "icon": "node-red/comment.png"
     },
     {
-        "id": "301e9555.ec2502",
-        "type": "api-current-state",
-        "z": "e19b6959.01ea1",
-        "name": "",
-        "server": "668a9dfa.d6421c",
-        "halt_if": "unknown",
-        "entity_id": "sensor.bucket_quotes",
-        "x": 830,
-        "y": 400,
-        "wires": [
-            [
-                "115de2c8.c8a68d"
-            ]
-        ]
-    },
-    {
-        "id": "115de2c8.c8a68d",
+        "id": "685bb8fd.e4f91",
         "type": "function",
-        "z": "e19b6959.01ea1",
+        "z": "d68fb564.ebfdd",
         "name": "Tell number of quotes",
-        "func": "var n = msg.data\n\nmsg.payload = \"Looks like I currently have \" + n.state + \" quotes!\";\nreturn msg;",
+        "func": "var quotes = msg.payload[\"124680630075260928\"].length\n\nmsg.payload = \"Looks like I currently have \" + quotes + \" quotes!\";\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "x": 1116.8333129882812,
@@ -252,28 +248,28 @@
         "icon": "node-red/comment.png"
     },
     {
-        "id": "e19c7169.0494e8",
+        "id": "bd877ff3.0e807",
         "type": "random",
-        "z": "e19b6959.01ea1",
+        "z": "d68fb564.ebfdd",
         "name": "",
         "low": "1",
-        "high": "14",
+        "high": "15",
         "inte": "true",
         "property": "rng",
         "x": 700,
         "y": 660,
         "wires": [
             [
-                "b74ddf3e.331fc"
+                "b47b4646.df20d"
             ]
         ]
     },
     {
-        "id": "8d785181.dbd938",
+        "id": "d0d353f3.c14f28",
         "type": "file in",
-        "z": "e19b6959.01ea1",
+        "z": "d68fb564.ebfdd",
         "name": "Read the file",
-        "filename": "/opt/docker-cfg/bucket/Red-DiscordBot/data/trigger/triggers.json",
+        "filename": "/data/redbot/triggers.json",
         "format": "utf8",
         "chunk": false,
         "sendError": false,
@@ -281,14 +277,14 @@
         "y": 580,
         "wires": [
             [
-                "6b41aba2.d798cc"
+                "fc7f8e30.3ad078"
             ]
         ]
     },
     {
-        "id": "6b41aba2.d798cc",
+        "id": "fc7f8e30.3ad078",
         "type": "json",
-        "z": "e19b6959.01ea1",
+        "z": "d68fb564.ebfdd",
         "name": "Convert to JSON object",
         "property": "payload",
         "action": "",
@@ -297,14 +293,14 @@
         "y": 617,
         "wires": [
             [
-                "e19c7169.0494e8"
+                "bd877ff3.0e807"
             ]
         ]
     },
     {
-        "id": "a34b8844.a5539",
+        "id": "39c269ef.99f696",
         "type": "comment",
-        "z": "e19b6959.01ea1",
+        "z": "d68fb564.ebfdd",
         "name": "Random User Factoid",
         "info": "",
         "x": 700,
@@ -312,9 +308,9 @@
         "wires": []
     },
     {
-        "id": "b74ddf3e.331fc",
+        "id": "b47b4646.df20d",
         "type": "switch",
-        "z": "e19b6959.01ea1",
+        "z": "d68fb564.ebfdd",
         "name": "",
         "property": "rng",
         "propertyType": "msg",
@@ -388,302 +384,310 @@
                 "t": "eq",
                 "v": "14",
                 "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "15",
+                "vt": "str"
             }
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 14,
+        "outputs": 15,
         "x": 850,
         "y": 620,
         "wires": [
             [
-                "bbd7ee35.3bf868"
+                "6015c5d5.5dc6cc"
             ],
             [
-                "8255d026.0ade5"
+                "cd3c91fd.e67b18"
             ],
             [
-                "74a844c8.2e4d7c"
+                "64b99762.b4403"
             ],
             [
-                "312fc832.2c6dc8"
+                "97c6ceb1.a1cdd8"
             ],
             [
-                "40c3b38e.b9a87c"
+                "5e65e217.66dbdc"
             ],
             [
-                "f2679374.497c18"
+                "ae45b926.4fc308"
             ],
             [
-                "fbdcecb8.54c7b"
+                "6855d77e.d94fc8"
             ],
             [
-                "58c5cb8f.b7d094"
+                "293c500f.9995b"
             ],
             [
-                "c6e16eae.232098"
+                "3e313bd.6ac5e44"
             ],
             [
-                "8a052278.9818"
+                "d060121e.0ec218"
             ],
             [
-                "3081ea09.f9a3d6"
+                "f22ff2cd.a5eac"
             ],
             [
-                "36a498fc.8dddc8"
+                "31ea8720.129f28"
             ],
             [
-                "b1a1381d.21f4e"
+                "37a5c778.686d58"
             ],
             [
-                "ede45ce3.cb1d58"
+                "97a5007e.476fc8"
+            ],
+            [
+                "a3a6bdbd.92e1d8"
             ]
         ]
     },
     {
-        "id": "bbd7ee35.3bf868",
+        "id": "6015c5d5.5dc6cc",
         "type": "function",
-        "z": "e19b6959.01ea1",
+        "z": "d68fb564.ebfdd",
         "name": "Ash Factoid",
-        "func": "var trigger = msg.payload[26];\nmsg.data = trigger;\nvar max = trigger.responses.length;\nvar rand = trigger.responses[Math.floor(Math.random()*max)];\n\nmsg.payload = \"Did you know? \" + decodeURI(rand)\nreturn msg;",
+        "func": "var trigger = msg.payload[26];\nmsg.data = trigger;\nvar max = trigger.responses.length;\nvar rand = trigger.responses[Math.floor(Math.random()*max)];\n\nmsg.payload = \"Did you know? \" + decodeURI(rand) + \"\\nWant to add more factoids? `Bucket, trigger add \" + trigger.name + \"`\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1030,
+        "y": 480,
+        "wires": [
+            [
+                "54558a2a.a4fcb4"
+            ]
+        ],
+        "icon": "node-red/comment.png"
+    },
+    {
+        "id": "cd3c91fd.e67b18",
+        "type": "function",
+        "z": "d68fb564.ebfdd",
+        "name": "Brian Factoid",
+        "func": "var trigger = msg.payload[27];\nmsg.data = trigger;\nvar max = trigger.responses.length;\nvar rand = trigger.responses[Math.floor(Math.random()*max)];\n\nmsg.payload = \"Did you know? \" + decodeURI(rand) + \"\\nWant to add more factoids? `Bucket, trigger add \" + trigger.name + \"`\"\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "x": 1030,
         "y": 500,
         "wires": [
             [
-                "cf3c3643.0a9978"
+                "54558a2a.a4fcb4"
             ]
         ],
         "icon": "node-red/comment.png"
     },
     {
-        "id": "8255d026.0ade5",
+        "id": "64b99762.b4403",
         "type": "function",
-        "z": "e19b6959.01ea1",
-        "name": "Brian Factoid",
-        "func": "var trigger = msg.payload[27];\nmsg.data = trigger;\nvar max = trigger.responses.length;\nvar rand = trigger.responses[Math.floor(Math.random()*max)];\n\nmsg.payload = \"Did you know? \" + decodeURI(rand)\nreturn msg;",
+        "z": "d68fb564.ebfdd",
+        "name": "Bucket Factoid",
+        "func": "var trigger = msg.payload[28];\nmsg.data = trigger;\nvar max = trigger.responses.length;\nvar rand = trigger.responses[Math.floor(Math.random()*max)];\nresponse = rand.replace(/bucket is/gi, \"I am\");\nresponse = response.replace(/bucket has/gi, \"I have\");\nresponse = response.replace(/bucket /i, \"I \"); //Should cover every other instance the first two didn't\nresponse = response.replace(/loves|likes|knows|needs|tells|hates|rules/i, function (x) {\n    return x.slice(0, -1);\n});\n\n\nmsg.payload = \"Did you know? \" + decodeURI(response) + \"\\nWant to add more factoids? `Bucket, trigger add \" + trigger.name + \"`\"\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1030,
+        "x": 1040,
         "y": 520,
         "wires": [
             [
-                "cf3c3643.0a9978"
+                "54558a2a.a4fcb4"
             ]
         ],
         "icon": "node-red/comment.png"
     },
     {
-        "id": "74a844c8.2e4d7c",
+        "id": "97c6ceb1.a1cdd8",
         "type": "function",
-        "z": "e19b6959.01ea1",
-        "name": "Bucket Factoid",
-        "func": "var trigger = msg.payload[28];\nmsg.data = trigger;\nvar max = trigger.responses.length;\nvar rand = trigger.responses[Math.floor(Math.random()*max)];\nresponse = rand.replace(/bucket is/gi, \"I am\");\nresponse = response.replace(/bucket has/gi, \"I have\");\nresponse = response.replace(/bucket /i, \"I \"); //Should cover every other instance the first two didn't\nresponse = response.replace(/loves|likes|knows|needs|tells|hates|rules/i, function (x) {\n    return x.slice(0, -1);\n});\n\n\nmsg.payload = \"Did you know? \" + decodeURI(response)\nreturn msg;",
+        "z": "d68fb564.ebfdd",
+        "name": "Casey Factoid",
+        "func": "var trigger = msg.payload[19];\nmsg.data = trigger;\nvar max = trigger.responses.length;\nvar rand = trigger.responses[Math.floor(Math.random()*max)];\n\nmsg.payload = \"Did you know? \" + decodeURI(rand) + \"\\nWant to add more factoids? `Bucket, trigger add \" + trigger.name + \"`\"\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "x": 1040,
         "y": 540,
         "wires": [
             [
-                "cf3c3643.0a9978"
+                "54558a2a.a4fcb4"
             ]
         ],
         "icon": "node-red/comment.png"
     },
     {
-        "id": "312fc832.2c6dc8",
+        "id": "5e65e217.66dbdc",
         "type": "function",
-        "z": "e19b6959.01ea1",
-        "name": "Casey Factoid",
-        "func": "var trigger = msg.payload[19];\nmsg.data = trigger;\nvar max = trigger.responses.length;\nvar rand = trigger.responses[Math.floor(Math.random()*max)];\n\nmsg.payload = \"Did you know? \" + decodeURI(rand)\nreturn msg;",
+        "z": "d68fb564.ebfdd",
+        "name": "Harley Factoid",
+        "func": "var trigger = msg.payload[18];\nmsg.data = trigger;\nvar max = trigger.responses.length;\nvar rand = trigger.responses[Math.floor(Math.random()*max)];\n\nmsg.payload = \"Did you know? \" + decodeURI(rand) + \"\\nWant to add more factoids? `Bucket, trigger add \" + trigger.name + \"`\"\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "x": 1040,
         "y": 560,
         "wires": [
             [
-                "cf3c3643.0a9978"
+                "54558a2a.a4fcb4"
             ]
         ],
         "icon": "node-red/comment.png"
     },
     {
-        "id": "40c3b38e.b9a87c",
+        "id": "ae45b926.4fc308",
         "type": "function",
-        "z": "e19b6959.01ea1",
-        "name": "Harley Factoid",
-        "func": "var trigger = msg.payload[18];\nmsg.data = trigger;\nvar max = trigger.responses.length;\nvar rand = trigger.responses[Math.floor(Math.random()*max)];\n\nmsg.payload = \"Did you know? \" + decodeURI(rand)\nreturn msg;",
+        "z": "d68fb564.ebfdd",
+        "name": "Hinchy Factoid",
+        "func": "var trigger = msg.payload[17];\nmsg.data = trigger;\nvar max = trigger.responses.length;\nvar rand = trigger.responses[Math.floor(Math.random()*max)];\n\nmsg.payload = \"Did you know? \" + decodeURI(rand) + \"\\nWant to add more factoids? `Bucket, trigger add \" + trigger.name + \"`\"\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "x": 1040,
         "y": 580,
         "wires": [
             [
-                "cf3c3643.0a9978"
+                "54558a2a.a4fcb4"
             ]
         ],
         "icon": "node-red/comment.png"
     },
     {
-        "id": "f2679374.497c18",
+        "id": "6855d77e.d94fc8",
         "type": "function",
-        "z": "e19b6959.01ea1",
-        "name": "Hinchy Factoid",
-        "func": "var trigger = msg.payload[17];\nmsg.data = trigger;\nvar max = trigger.responses.length;\nvar rand = trigger.responses[Math.floor(Math.random()*max)];\n\nmsg.payload = \"Did you know? \" + decodeURI(rand)\nreturn msg;",
+        "z": "d68fb564.ebfdd",
+        "name": "Neu Factoid",
+        "func": "var trigger = msg.payload[15];\nmsg.data = trigger;\nvar max = trigger.responses.length;\nvar rand = trigger.responses[Math.floor(Math.random()*max)];\n\nmsg.payload = \"Did you know? \" + decodeURI(rand) + \"\\nWant to add more factoids? `Bucket, trigger add \" + trigger.name + \"`\"\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1040,
+        "x": 1030,
         "y": 600,
         "wires": [
             [
-                "cf3c3643.0a9978"
+                "54558a2a.a4fcb4"
             ]
         ],
         "icon": "node-red/comment.png"
     },
     {
-        "id": "fbdcecb8.54c7b",
+        "id": "293c500f.9995b",
         "type": "function",
-        "z": "e19b6959.01ea1",
-        "name": "Neu Factoid",
-        "func": "var trigger = msg.payload[15];\nmsg.data = trigger;\nvar max = trigger.responses.length;\nvar rand = trigger.responses[Math.floor(Math.random()*max)];\n\nmsg.payload = \"Did you know? \" + decodeURI(rand)\nreturn msg;",
+        "z": "d68fb564.ebfdd",
+        "name": "Phil Factoid",
+        "func": "var trigger = msg.payload[22];\nmsg.data = trigger;\nvar max = trigger.responses.length;\nvar rand = trigger.responses[Math.floor(Math.random()*max)];\n\nmsg.payload = \"Did you know? \" + decodeURI(rand) + \"\\nWant to add more factoids? `Bucket, trigger add \" + trigger.name + \"`\"\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "x": 1030,
         "y": 620,
         "wires": [
             [
-                "cf3c3643.0a9978"
+                "54558a2a.a4fcb4"
             ]
         ],
         "icon": "node-red/comment.png"
     },
     {
-        "id": "58c5cb8f.b7d094",
+        "id": "3e313bd.6ac5e44",
         "type": "function",
-        "z": "e19b6959.01ea1",
-        "name": "Phil Factoid",
-        "func": "var trigger = msg.payload[22];\nmsg.data = trigger;\nvar max = trigger.responses.length;\nvar rand = trigger.responses[Math.floor(Math.random()*max)];\n\nmsg.payload = \"Did you know? \" + decodeURI(rand)\nreturn msg;",
+        "z": "d68fb564.ebfdd",
+        "name": "Quetz Factoid",
+        "func": "var trigger = msg.payload[16];\nmsg.data = trigger;\nvar max = trigger.responses.length;\nvar rand = trigger.responses[Math.floor(Math.random()*max)];\n\nmsg.payload = \"Did you know? \" + decodeURI(rand) + \"\\nWant to add more factoids? `Bucket, trigger add \" + trigger.name + \"`\"\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1030,
+        "x": 1040,
         "y": 640,
         "wires": [
             [
-                "cf3c3643.0a9978"
+                "54558a2a.a4fcb4"
             ]
         ],
         "icon": "node-red/comment.png"
     },
     {
-        "id": "c6e16eae.232098",
+        "id": "d060121e.0ec218",
         "type": "function",
-        "z": "e19b6959.01ea1",
-        "name": "Quetz Factoid",
-        "func": "var trigger = msg.payload[16];\nmsg.data = trigger;\nvar max = trigger.responses.length;\nvar rand = trigger.responses[Math.floor(Math.random()*max)];\n\nmsg.payload = \"Did you know? \" + decodeURI(rand)\nreturn msg;",
+        "z": "d68fb564.ebfdd",
+        "name": "Spicy Factoid",
+        "func": "var trigger = msg.payload[24];\nmsg.data = trigger;\nvar max = trigger.responses.length;\nvar rand = trigger.responses[Math.floor(Math.random()*max)];\n\nmsg.payload = \"Did you know? \" + decodeURI(rand) + \"\\nWant to add more factoids? `Bucket, trigger add \" + trigger.name + \"`\"\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "x": 1040,
         "y": 660,
         "wires": [
             [
-                "cf3c3643.0a9978"
+                "54558a2a.a4fcb4"
             ]
         ],
         "icon": "node-red/comment.png"
     },
     {
-        "id": "8a052278.9818",
+        "id": "f22ff2cd.a5eac",
         "type": "function",
-        "z": "e19b6959.01ea1",
-        "name": "SpicyFactoid",
-        "func": "var trigger = msg.payload[24];\nmsg.data = trigger;\nvar max = trigger.responses.length;\nvar rand = trigger.responses[Math.floor(Math.random()*max)];\n\nmsg.payload = \"Did you know? \" + decodeURI(rand)\nreturn msg;",
+        "z": "d68fb564.ebfdd",
+        "name": "SC Factoid",
+        "func": "var trigger = msg.payload[20];\nmsg.data = trigger;\nvar max = trigger.responses.length;\nvar rand = trigger.responses[Math.floor(Math.random()*max)];\n\nmsg.payload = \"Did you know? \" + decodeURI(rand) + \"\\nWant to add more factoids? `Bucket, trigger add \" + trigger.name + \"`\"\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "x": 1030,
         "y": 680,
         "wires": [
             [
-                "cf3c3643.0a9978"
+                "54558a2a.a4fcb4"
             ]
         ],
         "icon": "node-red/comment.png"
     },
     {
-        "id": "3081ea09.f9a3d6",
+        "id": "31ea8720.129f28",
         "type": "function",
-        "z": "e19b6959.01ea1",
-        "name": "SC Factoid",
-        "func": "var trigger = msg.payload[20];\nmsg.data = trigger;\nvar max = trigger.responses.length;\nvar rand = trigger.responses[Math.floor(Math.random()*max)];\n\nmsg.payload = \"Did you know? \" + decodeURI(rand)\nreturn msg;",
+        "z": "d68fb564.ebfdd",
+        "name": "Ted Factoid",
+        "func": "var trigger = msg.payload[21];\nmsg.data = trigger;\nvar max = trigger.responses.length;\nvar rand = trigger.responses[Math.floor(Math.random()*max)];\n\nmsg.payload = \"Did you know? \" + decodeURI(rand) + \"\\nWant to add more factoids? `Bucket, trigger add \" + trigger.name + \"`\"\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "x": 1030,
         "y": 700,
         "wires": [
             [
-                "cf3c3643.0a9978"
+                "54558a2a.a4fcb4"
             ]
         ],
         "icon": "node-red/comment.png"
     },
     {
-        "id": "36a498fc.8dddc8",
+        "id": "37a5c778.686d58",
         "type": "function",
-        "z": "e19b6959.01ea1",
-        "name": "Ted Factoid",
-        "func": "var trigger = msg.payload[21];\nmsg.data = trigger;\nvar max = trigger.responses.length;\nvar rand = trigger.responses[Math.floor(Math.random()*max)];\n\nmsg.payload = \"Did you know? \" + decodeURI(rand)\nreturn msg;",
+        "z": "d68fb564.ebfdd",
+        "name": "Teriki Factoid",
+        "func": "var trigger = msg.payload[22];\nmsg.data = trigger;\nvar max = trigger.responses.length;\nvar rand = trigger.responses[Math.floor(Math.random()*max)];\n\nmsg.payload = \"Did you know? \" + decodeURI(rand) + \"\\nWant to add more factoids? `Bucket, trigger add \" + trigger.name + \"`\"\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "x": 1030,
         "y": 720,
         "wires": [
             [
-                "cf3c3643.0a9978"
+                "54558a2a.a4fcb4"
             ]
         ],
         "icon": "node-red/comment.png"
     },
     {
-        "id": "b1a1381d.21f4e",
+        "id": "97a5007e.476fc8",
         "type": "function",
-        "z": "e19b6959.01ea1",
-        "name": "Teriki Factoid",
-        "func": "var trigger = msg.payload[22];\nmsg.data = trigger;\nvar max = trigger.responses.length;\nvar rand = trigger.responses[Math.floor(Math.random()*max)];\n\nmsg.payload = \"Did you know? \" + decodeURI(rand)\nreturn msg;",
+        "z": "d68fb564.ebfdd",
+        "name": "Tobi Factoid",
+        "func": "var trigger = msg.payload[23];\nmsg.data = trigger;\nvar max = trigger.responses.length;\nvar rand = trigger.responses[Math.floor(Math.random()*max)];\n\nmsg.payload = \"Did you know? \" + decodeURI(rand) + \"\\nWant to add more factoids? `Bucket, trigger add \" + trigger.name + \"`\"\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "x": 1030,
         "y": 740,
         "wires": [
             [
-                "cf3c3643.0a9978"
+                "54558a2a.a4fcb4"
             ]
         ],
         "icon": "node-red/comment.png"
     },
     {
-        "id": "ede45ce3.cb1d58",
-        "type": "function",
-        "z": "e19b6959.01ea1",
-        "name": "Tobi Factoid",
-        "func": "var trigger = msg.payload[23];\nmsg.data = trigger;\nvar max = trigger.responses.length;\nvar rand = trigger.responses[Math.floor(Math.random()*max)];\n\nmsg.payload = \"Did you know? \" + decodeURI(rand)\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 1030,
-        "y": 760,
-        "wires": [
-            [
-                "cf3c3643.0a9978"
-            ]
-        ],
-        "icon": "node-red/comment.png"
-    },
-    {
-        "id": "e8fcf665.ae148",
+        "id": "d59fdfd5.2f4438",
         "type": "file in",
-        "z": "e19b6959.01ea1",
+        "z": "d68fb564.ebfdd",
         "name": "Read the file",
-        "filename": "/opt/docker-cfg/bucket/Red-DiscordBot/data/trigger/triggers.json",
+        "filename": "/data/redbot/triggers.json",
         "format": "utf8",
         "chunk": false,
         "sendError": false,
@@ -691,14 +695,14 @@
         "y": 820,
         "wires": [
             [
-                "459fc16d.b5875"
+                "7ecfd5bc.07b3f4"
             ]
         ]
     },
     {
-        "id": "459fc16d.b5875",
+        "id": "7ecfd5bc.07b3f4",
         "type": "json",
-        "z": "e19b6959.01ea1",
+        "z": "d68fb564.ebfdd",
         "name": "Convert to JSON object",
         "property": "payload",
         "action": "",
@@ -707,16 +711,16 @@
         "y": 820,
         "wires": [
             [
-                "ed20d791.a0b598"
+                "b4cb424a.e1df5"
             ]
         ]
     },
     {
-        "id": "ed20d791.a0b598",
+        "id": "b4cb424a.e1df5",
         "type": "function",
-        "z": "e19b6959.01ea1",
+        "z": "d68fb564.ebfdd",
         "name": "Get a random Jam",
-        "func": "var max = msg.payload[5].responses.length;\nvar rand = msg.payload[5].responses[Math.floor(Math.random()*max)];\n\nmsg.payload = \"🎵 \" + decodeURI(rand)\nreturn msg;",
+        "func": "var max = msg.payload[5].responses.length;\nvar rand = msg.payload[5].responses[Math.floor(Math.random()*max)];\n\nmsg.data = msg.payload[5];\nmsg.payload = \"🎵 \" + decodeURI(rand) + \"\\nGive me some more tasty jams! `Bucket, trigger add givemeajam`\"\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "x": 1150,
@@ -727,409 +731,115 @@
         "icon": "node-red/comment.png"
     },
     {
-        "id": "cf3c3643.0a9978",
+        "id": "a3a6bdbd.92e1d8",
         "type": "function",
-        "z": "e19b6959.01ea1",
+        "z": "d68fb564.ebfdd",
+        "name": "Sam Factoid",
+        "func": "var trigger = msg.payload[34];\nmsg.data = trigger;\nvar max = trigger.responses.length;\nvar rand = trigger.responses[Math.floor(Math.random()*max)];\n\nmsg.payload = \"Did you know? \" + decodeURI(rand) + \"\\nWant to add more factoids? `Bucket, trigger add \" + trigger.name + \"`\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1030,
+        "y": 760,
+        "wires": [
+            [
+                "54558a2a.a4fcb4"
+            ]
+        ],
+        "icon": "node-red/comment.png"
+    },
+    {
+        "id": "5a51e555.2b819c",
+        "type": "file in",
+        "z": "d68fb564.ebfdd",
+        "name": "Read the file",
+        "filename": "/data/redbot/quotes.json",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "x": 650,
+        "y": 400,
+        "wires": [
+            [
+                "83e9acc6.5529e8"
+            ]
+        ]
+    },
+    {
+        "id": "83e9acc6.5529e8",
+        "type": "json",
+        "z": "d68fb564.ebfdd",
+        "name": "Convert to JSON object",
+        "property": "payload",
+        "action": "",
+        "pretty": true,
+        "x": 871,
+        "y": 401,
+        "wires": [
+            [
+                "685bb8fd.e4f91"
+            ]
+        ]
+    },
+    {
+        "id": "54558a2a.a4fcb4",
+        "type": "function",
+        "z": "d68fb564.ebfdd",
         "name": "Add topic for Discord processing",
         "func": "msg.topic = \"factoid\";\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1490,
-        "y": 580,
+        "x": 1390,
+        "y": 600,
         "wires": [
             []
         ]
     },
     {
-        "id": "668a9dfa.d6421c",
-        "type": "server",
-        "z": "",
-        "name": "Home Assistant",
-        "url": "",
-        "pass": ""
-    },
-    {
-        "id": "73aac021.6215c",
-        "type": "subflow",
-        "name": "Bucket Idle Pool",
-        "info": "",
-        "in": [
-            {
-                "x": 180,
-                "y": 340,
-                "wires": [
-                    {
-                        "id": "b96bbd2c.2b5558"
-                    }
-                ]
-            }
-        ],
-        "out": [
-            {
-                "x": 1360,
-                "y": 320,
-                "wires": [
-                    {
-                        "id": "3e79c330.4aef3c",
-                        "port": 0
-                    },
-                    {
-                        "id": "f1261769.25c1f8",
-                        "port": "1"
-                    },
-                    {
-                        "id": "e47f97f9.c14408",
-                        "port": 0
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "id": "2a3c6964.4b6596",
-        "type": "subflow:e19b6959.01ea1",
-        "z": "73aac021.6215c",
-        "name": "",
-        "x": 770,
-        "y": 320,
+        "id": "c473cfa3.5095c",
+        "type": "file in",
+        "z": "d68fb564.ebfdd",
+        "name": "Read the file",
+        "filename": "/data/redbot/triggers.json",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "x": 670,
+        "y": 880,
         "wires": [
             [
-                "f1261769.25c1f8"
+                "526d65a4.660b04"
             ]
         ]
     },
     {
-        "id": "b96bbd2c.2b5558",
-        "type": "random",
-        "z": "73aac021.6215c",
-        "name": "",
-        "low": "1",
-        "high": "2",
-        "inte": "true",
+        "id": "526d65a4.660b04",
+        "type": "json",
+        "z": "d68fb564.ebfdd",
+        "name": "Convert to JSON object",
         "property": "payload",
-        "x": 280,
-        "y": 340,
+        "action": "",
+        "pretty": true,
+        "x": 891,
+        "y": 881,
         "wires": [
             [
-                "d7d8be1d.462bf"
+                "1d7174f9.6426cb"
             ]
         ]
     },
     {
-        "id": "d7d8be1d.462bf",
-        "type": "switch",
-        "z": "73aac021.6215c",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "1",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "2",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "3",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "4",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "5",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "6",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 6,
-        "x": 410,
-        "y": 340,
-        "wires": [
-            [
-                "2a3c6964.4b6596"
-            ],
-            [
-                "2a3c6964.4b6596"
-            ],
-            [
-                "2a3c6964.4b6596"
-            ],
-            [
-                "2a3c6964.4b6596"
-            ],
-            [
-                "2a3c6964.4b6596"
-            ],
-            [
-                "9c957950.73775"
-            ]
-        ]
-    },
-    {
-        "id": "9c957950.73775",
-        "type": "twitter-user",
-        "z": "73aac021.6215c",
-        "creds": "d146b365.f7349",
-        "name": "Billwurtz tweets",
-        "screen_name": "BillWurtz",
-        "x": 740,
-        "y": 420,
-        "wires": [
-            [
-                "48102194.0e8738"
-            ]
-        ]
-    },
-    {
-        "id": "3e79c330.4aef3c",
+        "id": "1d7174f9.6426cb",
         "type": "function",
-        "z": "73aac021.6215c",
-        "name": "Format",
-        "func": "\nmsg.payload = \" \" + \"https://twitter.com/\" + msg.payload.screen_name + \"/status/\" + msg.payload.status.id_str;\n\nreturn msg;",
+        "z": "d68fb564.ebfdd",
+        "name": "Get a random '...' line",
+        "func": "var max = msg.payload[37].responses.length;\nvar rand = msg.payload[37].responses[Math.floor(Math.random()*max)];\n\nmsg.data = msg.payload[37];\nmsg.payload = decodeURI(rand) + \"\\n\\nWhat else goes on when chat is quiet? `Bucket, trigger add dotdotdot`\"\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1100,
-        "y": 420,
+        "x": 1148.5714721679688,
+        "y": 879.4285583496094,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "48102194.0e8738",
-        "type": "deduplicate",
-        "z": "73aac021.6215c",
-        "name": "",
-        "keyproperty": "",
-        "expiry": "86400",
-        "x": 910,
-        "y": 420,
-        "wires": [
-            [
-                "3e79c330.4aef3c"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "f1261769.25c1f8",
-        "type": "switch",
-        "z": "73aac021.6215c",
-        "name": "If factoid",
-        "property": "topic",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "factoid",
-                "vt": "str"
-            },
-            {
-                "t": "else"
-            }
         ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 1000,
-        "y": 320,
-        "wires": [
-            [
-                "e47f97f9.c14408"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "e47f97f9.c14408",
-        "type": "function",
-        "z": "73aac021.6215c",
-        "name": "Factoid adding incentive",
-        "func": "msg.payload = msg.payload + \"\\nWant to add more factoids? `Bucket, trigger add \" + msg.data.name + \"`\"\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 1210,
-        "y": 260,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "d146b365.f7349",
-        "type": "twitter-client",
-        "z": "73aac021.6215c",
-        "name": "FluffyFallow",
-        "consumer_key": "",
-        "consumer_secret": "",
-        "access_token_key": "",
-        "access_token_secret": ""
-    },
-    {
-        "id": "7b5c573d.fec01",
-        "type": "switch",
-        "z": "c4a38827.e27a18",
-        "name": "Sort Channel",
-        "property": "channel",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "124680630075260928",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "220390355487424512",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 450,
-        "y": 260,
-        "wires": [
-            [
-                "59eb74fc.be73dc"
-            ],
-            [
-                "9b0b0e71.ee8618"
-            ]
-        ]
-    },
-    {
-        "id": "e1e71ba3.be3628",
-        "type": "comment",
-        "z": "c4a38827.e27a18",
-        "name": "#general",
-        "info": "",
-        "x": 620,
-        "y": 200,
-        "wires": []
-    },
-    {
-        "id": "b981e83e.6ed2a",
-        "type": "comment",
-        "z": "c4a38827.e27a18",
-        "name": "#botworkshop",
-        "info": "",
-        "x": 630,
-        "y": 280,
-        "wires": []
-    },
-    {
-        "id": "930cc68f.bc494",
-        "type": "subflow:73aac021.6215c",
-        "z": "c4a38827.e27a18",
-        "name": "",
-        "x": 920,
-        "y": 240,
-        "wires": [
-            [
-                "bb3aed6a.fa0ee8"
-            ]
-        ]
-    },
-    {
-        "id": "bb3aed6a.fa0ee8",
-        "type": "function",
-        "z": "c4a38827.e27a18",
-        "name": "🕘 icon",
-        "func": "msg.payload = \"🕘\" + msg.payload;\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 1100,
-        "y": 240,
-        "wires": [
-            [
-                "f589a738.301998"
-            ]
-        ]
-    },
-    {
-        "id": "746149a1.9ec2a",
-        "type": "link in",
-        "z": "c4a38827.e27a18",
-        "name": "",
-        "links": [
-            "bb2c67ed.b217b8"
-        ],
-        "x": 140,
-        "y": 260,
-        "wires": [
-            [
-                "7b5c573d.fec01"
-            ]
-        ]
-    },
-    {
-        "id": "f589a738.301998",
-        "type": "link out",
-        "z": "c4a38827.e27a18",
-        "name": "",
-        "links": [
-            "950003c4.e4427"
-        ],
-        "x": 1235,
-        "y": 240,
-        "wires": []
-    },
-    {
-        "id": "59eb74fc.be73dc",
-        "type": "trigger",
-        "z": "c4a38827.e27a18",
-        "op1": "",
-        "op2": "",
-        "op1type": "nul",
-        "op2type": "payl",
-        "duration": "3",
-        "extend": true,
-        "units": "hr",
-        "reset": "",
-        "bytopic": "all",
-        "name": "3h idle delay",
-        "x": 630,
-        "y": 220,
-        "wires": [
-            [
-                "930cc68f.bc494"
-            ]
-        ]
-    },
-    {
-        "id": "9b0b0e71.ee8618",
-        "type": "trigger",
-        "z": "c4a38827.e27a18",
-        "op1": "",
-        "op2": "",
-        "op1type": "nul",
-        "op2type": "payl",
-        "duration": "45",
-        "extend": true,
-        "units": "min",
-        "reset": "",
-        "bytopic": "all",
-        "name": "45m idle delay",
-        "x": 640,
-        "y": 300,
-        "wires": [
-            [
-                "930cc68f.bc494"
-            ]
-        ]
+        "icon": "node-red/comment.png"
     }
 ]
