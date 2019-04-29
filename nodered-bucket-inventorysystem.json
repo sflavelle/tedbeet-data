@@ -1,6 +1,6 @@
 [
     {
-        "id": "f7b13973.8fd138",
+        "id": "e268b9e1.d87a98",
         "type": "subflow",
         "name": "Discord API User Process",
         "info": "",
@@ -10,7 +10,7 @@
                 "y": 380,
                 "wires": [
                     {
-                        "id": "4dfeb76c.0a3b"
+                        "id": "bda114b8.7921b"
                     }
                 ]
             }
@@ -18,10 +18,10 @@
         "out": [
             {
                 "x": 400,
-                "y": 500,
+                "y": 540,
                 "wires": [
                     {
-                        "id": "91ef7919.63f048",
+                        "id": "e55c711.f3b171",
                         "port": 0
                     }
                 ]
@@ -29,9 +29,9 @@
         ]
     },
     {
-        "id": "5796e92d.6c1ff8",
+        "id": "178a242d.aee39c",
         "type": "http request",
-        "z": "f7b13973.8fd138",
+        "z": "e268b9e1.d87a98",
         "name": "Ring ring, call Discord",
         "method": "GET",
         "ret": "obj",
@@ -41,30 +41,30 @@
         "y": 420,
         "wires": [
             [
-                "db62fb89.e521f"
+                "9704343a.26f318"
             ]
         ]
     },
     {
-        "id": "4dfeb76c.0a3b",
+        "id": "bda114b8.7921b",
         "type": "function",
-        "z": "f7b13973.8fd138",
+        "z": "e268b9e1.d87a98",
         "name": "Set HTTP Data",
-        "func": "msg.item = msg.payload; //This'll get overwritten\n\nmsg.url = \"https://discordapp.com/api/users/\" + msg.author;\n\nmsg.headers = {};\nmsg.headers['User-Agent'] = 'DiscordBot (http://cogs.red/, Bucket 20180518)';\nmsg.headers['Authorization'] = 'haha nope';\n\nreturn msg;",
+        "func": "msg.item = msg.payload; //This'll get overwritten\n\nmsg.url = \"https://discordapp.com/api/users/\" + msg.author;\n\nmsg.headers = {};\nmsg.headers['User-Agent'] = 'DiscordBot (http://cogs.red/, Bucket 20180518)';\nmsg.headers['Authorization'] = 'Bot MjUwOTQ3NjgyNzU4MTY0NDkx.Dd_7bw.hjAc5AG2b-5lhrwNDRtE6YrsjhI';\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "x": 320,
         "y": 380,
         "wires": [
             [
-                "5796e92d.6c1ff8"
+                "178a242d.aee39c"
             ]
         ]
     },
     {
-        "id": "db62fb89.e521f",
+        "id": "9704343a.26f318",
         "type": "change",
-        "z": "f7b13973.8fd138",
+        "z": "e268b9e1.d87a98",
         "name": "",
         "rules": [
             {
@@ -84,14 +84,14 @@
         "y": 460,
         "wires": [
             [
-                "91ef7919.63f048"
+                "e55c711.f3b171"
             ]
         ]
     },
     {
-        "id": "91ef7919.63f048",
+        "id": "e55c711.f3b171",
         "type": "function",
-        "z": "f7b13973.8fd138",
+        "z": "e268b9e1.d87a98",
         "name": "String replace on \"my\"",
         "func": "var user = msg.discordapi.username + \"'s \";\nmsg.payload = msg.item.replace(\"my \",user);\nreturn msg;",
         "outputs": 1,
@@ -103,45 +103,213 @@
         ]
     },
     {
-        "id": "2b6df908.e93206",
-        "type": "link in",
-        "z": "c4a38827.e27a18",
+        "id": "aee5069b.d014e8",
+        "type": "function",
+        "z": "d3710e77.fdc7b",
+        "name": "Attempt remove item",
+        "func": "var itemlist = msg.payload;\nvar delitem = msg.delitem;\n\nvar delindex = itemlist.indexOf(delitem);\nif (delindex > -1) {\n    itemlist.splice(delindex, 1);\n    msg.payload = itemlist;\n  return [msg, null];\n} else {\n    msg.payload = \"I don't know that item.\";\n    return [null, msg];\n}\n",
+        "outputs": 2,
+        "noerr": 0,
+        "x": 900,
+        "y": 960,
+        "wires": [
+            [
+                "9d58b6ab.0087d8",
+                "2e48b8a6.7b4398"
+            ],
+            [
+                "74dfe50.5da631c"
+            ]
+        ],
+        "outputLabels": [
+            "Removed duplicate",
+            "no duplicate"
+        ]
+    },
+    {
+        "id": "9d58b6ab.0087d8",
+        "type": "function",
+        "z": "d3710e77.fdc7b",
+        "name": "Discord message",
+        "func": "// Pick one!\nmsg.payload = \"OK, removed *\" + msg.delitem + \"* from my inventory.\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1210,
+        "y": 940,
+        "wires": [
+            [
+                "74dfe50.5da631c"
+            ]
+        ]
+    },
+    {
+        "id": "74dfe50.5da631c",
+        "type": "link out",
+        "z": "d3710e77.fdc7b",
         "name": "",
         "links": [
-            "bb2c67ed.b217b8"
+            "282535c.7b81aca"
         ],
-        "x": 115,
-        "y": 520,
+        "x": 1355,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "d8448ae2.d099b8",
+        "type": "DataOut",
+        "z": "d3710e77.fdc7b",
+        "collection": "f8c73668.33ec18",
+        "name": "",
+        "topic": "/helditems",
+        "error": false,
+        "x": 730,
+        "y": 960,
         "wires": [
             [
-                "e6e1c489.160618",
-                "6a56f10c.d8af18",
-                "8972ff52.fdb57",
-                "75f3a7fc.b54d68",
-                "f1e169bb.2b3a"
+                "aee5069b.d014e8"
             ]
         ]
     },
     {
-        "id": "e6e1c489.160618",
-        "type": "filter",
-        "z": "c4a38827.e27a18",
-        "name": "Accept an item",
-        "property": "payload",
-        "filter": "^(Bucket, )?(take|have) ",
-        "ignorecase": true,
-        "x": 340,
-        "y": 460,
-        "wires": [
-            [
-                "67e3c69e.5b4f08"
-            ]
-        ]
-    },
-    {
-        "id": "67e3c69e.5b4f08",
+        "id": "2e4004c4.1927ec",
         "type": "string",
-        "z": "c4a38827.e27a18",
+        "z": "d3710e77.fdc7b",
+        "name": "Extract item",
+        "methods": [
+            {
+                "name": "delLeftMost",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": "spill "
+                    }
+                ]
+            }
+        ],
+        "prop": "payload",
+        "propout": "delitem",
+        "object": "msg",
+        "objectout": "msg",
+        "x": 550,
+        "y": 960,
+        "wires": [
+            [
+                "d8448ae2.d099b8"
+            ]
+        ]
+    },
+    {
+        "id": "7d9639fd.f90588",
+        "type": "filter",
+        "z": "d3710e77.fdc7b",
+        "name": "Remove an item",
+        "property": "payload",
+        "propertyType": "msg",
+        "asArray": false,
+        "itemProperty": "",
+        "itemPropertyType": "item",
+        "rules": [
+            {
+                "t": "regex",
+                "v": "^Bucket, (spill|delitem) ",
+                "vt": "str",
+                "case": true,
+                "output": 1
+            }
+        ],
+        "outputs": 1,
+        "x": 380,
+        "y": 960,
+        "wires": [
+            [
+                "2e4004c4.1927ec",
+                "5ba2d756.b30888"
+            ]
+        ]
+    },
+    {
+        "id": "4634ac14.13afa4",
+        "type": "link in",
+        "z": "d3710e77.fdc7b",
+        "name": "Inventory System",
+        "links": [
+            "865ee3a2.df7428"
+        ],
+        "x": 155,
+        "y": 660,
+        "wires": [
+            [
+                "7d9639fd.f90588",
+                "a1a13a3f.02eda8",
+                "59acf5a5.28d81c",
+                "6ba71f1.ee982e",
+                "48d708bf.5b4aa8",
+                "f66e177a.1eabf8"
+            ]
+        ]
+    },
+    {
+        "id": "a1a13a3f.02eda8",
+        "type": "filter",
+        "z": "d3710e77.fdc7b",
+        "name": "Give out an item",
+        "property": "payload",
+        "propertyType": "msg",
+        "asArray": false,
+        "itemProperty": "",
+        "itemPropertyType": "item",
+        "rules": [
+            {
+                "t": "regex",
+                "v": "(gimme|give me) (a present|an item|something)",
+                "vt": "str",
+                "case": true,
+                "output": 1
+            }
+        ],
+        "outputs": 1,
+        "x": 380,
+        "y": 680,
+        "wires": [
+            [
+                "80ac6988.b70158",
+                "c9cab490.0bbfa8"
+            ]
+        ]
+    },
+    {
+        "id": "59acf5a5.28d81c",
+        "type": "filter",
+        "z": "d3710e77.fdc7b",
+        "name": "Rummage for items",
+        "property": "payload",
+        "propertyType": "msg",
+        "asArray": false,
+        "itemProperty": "",
+        "itemPropertyType": "item",
+        "rules": [
+            {
+                "t": "regex",
+                "v": "rummage$",
+                "vt": "str",
+                "case": true,
+                "output": 1
+            }
+        ],
+        "outputs": 1,
+        "x": 350,
+        "y": 560,
+        "wires": [
+            [
+                "80be7491.64c9d8",
+                "3c5cadf1.94c122"
+            ]
+        ]
+    },
+    {
+        "id": "7d35f92c.1c8cb8",
+        "type": "string",
+        "z": "d3710e77.fdc7b",
         "name": "Extract item descriptor",
         "methods": [
             {
@@ -154,11 +322,11 @@
                 ]
             },
             {
-                "name": "delLeftMost",
+                "name": "strip",
                 "params": [
                     {
                         "type": "str",
-                        "value": "have "
+                        "value": "*_"
                     }
                 ]
             }
@@ -167,203 +335,51 @@
         "propout": "payload",
         "object": "msg",
         "objectout": "msg",
-        "x": 540,
-        "y": 460,
+        "x": 580,
+        "y": 340,
         "wires": [
             [
-                "6e28a165.83871"
+                "d7a68663.9a1208"
             ]
         ]
     },
     {
-        "id": "9f99ee46.e5b658",
-        "type": "function",
-        "z": "c4a38827.e27a18",
-        "name": "Discord message",
-        "func": "// Random messages\nvar randmessage = [];\nrandmessage[0] = \"Alright, adding *\" + msg.newitem + \"* to my inventory.\";\nrandmessage[1] = \"Bucket is now carrying *\" + msg.newitem + \"*.\";\nrandmessage[2] = \"Taking *\" + msg.newitem + \"*.\";\nrandmessage[3] = \"-eats *\" + msg.newitem + \"*-\";\n\n// Pick one!\nmsg.payload = randmessage[Math.floor(Math.random()*randmessage.length-1)];\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 1610,
-        "y": 440,
-        "wires": [
-            [
-                "3cf00799.0727b"
-            ]
-        ]
-    },
-    {
-        "id": "3cf00799.0727b",
-        "type": "link out",
-        "z": "c4a38827.e27a18",
+        "id": "9aadb919.fd1848",
+        "type": "DataOut",
+        "z": "d3710e77.fdc7b",
+        "collection": "f8c73668.33ec18",
         "name": "",
-        "links": [
-            "950003c4.e4427"
-        ],
-        "x": 1715,
-        "y": 560,
-        "wires": []
+        "topic": "/helditems",
+        "error": true,
+        "x": 510,
+        "y": 780,
+        "wires": [
+            [
+                "8a223710.f17a08",
+                "31e8aebe.750c42"
+            ]
+        ]
     },
     {
-        "id": "8e70e2d9.541fb8",
-        "type": "file",
-        "z": "c4a38827.e27a18",
+        "id": "bbef4a69.9d0518",
+        "type": "DataOut",
+        "z": "d3710e77.fdc7b",
+        "collection": "f8c73668.33ec18",
         "name": "",
-        "filename": "/home/homeassistant/nodered-bucketinventory.json",
-        "appendNewline": true,
-        "createDir": false,
-        "overwriteFile": "false",
-        "x": 1510,
-        "y": 400,
-        "wires": []
-    },
-    {
-        "id": "6a56f10c.d8af18",
-        "type": "filter",
-        "z": "c4a38827.e27a18",
-        "name": "Give out an item",
-        "property": "payload",
-        "filter": "(gimme|give me) (a present|an item|something)",
-        "ignorecase": true,
-        "x": 340,
-        "y": 580,
+        "topic": "/allitems",
+        "error": false,
+        "x": 930,
+        "y": 540,
         "wires": [
             [
-                "290791ce.8f5936"
+                "86b02198.e22b"
             ]
         ]
     },
     {
-        "id": "290791ce.8f5936",
-        "type": "file in",
-        "z": "c4a38827.e27a18",
-        "name": "Read inventory file",
-        "filename": "/home/homeassistant/nodered-bucketinventory.json",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "x": 550,
-        "y": 580,
-        "wires": [
-            [
-                "e9f687fd.fd1c"
-            ]
-        ]
-    },
-    {
-        "id": "e9f687fd.fd1c",
-        "type": "string",
-        "z": "c4a38827.e27a18",
-        "name": "Split into an array",
-        "methods": [
-            {
-                "name": "lines",
-                "params": []
-            }
-        ],
-        "prop": "payload",
-        "propout": "payload",
-        "object": "msg",
-        "objectout": "msg",
-        "x": 800,
-        "y": 580,
-        "wires": [
-            [
-                "b8136a3.814d798"
-            ]
-        ]
-    },
-    {
-        "id": "b8136a3.814d798",
-        "type": "function",
-        "z": "c4a38827.e27a18",
-        "name": "Discord message",
-        "func": "var items = msg.payload.length-1;\nmsg.randitem = msg.payload[Math.floor(Math.random()*items)];\n\n// Random messages\nvar randmessage = [];\nrandmessage[0] = \"-gives you a brightly wrapped package containing *\" + msg.randitem + \"*.-\";\nrandmessage[1] = \"-hands you *\" + msg.randitem + \"*-\";\nrandmessage[2] = \"-gives you *\" + msg.randitem + \"*-\";\nrandmessage[3] = \"Here then, have *\" + msg.randitem + \"*\";\n\n// Pick one!\nmsg.payload = randmessage[Math.floor(Math.random()*randmessage.length-1)];\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 1010,
-        "y": 580,
-        "wires": [
-            [
-                "3cf00799.0727b"
-            ]
-        ]
-    },
-    {
-        "id": "8972ff52.fdb57",
-        "type": "filter",
-        "z": "c4a38827.e27a18",
-        "name": "List items",
-        "property": "payload",
-        "filter": "(lsitems|inventory)$",
-        "ignorecase": true,
-        "x": 320,
-        "y": 640,
-        "wires": [
-            [
-                "1f6ab74b.48dba9"
-            ]
-        ]
-    },
-    {
-        "id": "1f6ab74b.48dba9",
-        "type": "file in",
-        "z": "c4a38827.e27a18",
-        "name": "Read inventory file",
-        "filename": "/home/homeassistant/nodered-bucketinventory.json",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "x": 550,
-        "y": 640,
-        "wires": [
-            [
-                "6e7ca647.e5822"
-            ]
-        ]
-    },
-    {
-        "id": "6e7ca647.e5822",
-        "type": "string",
-        "z": "c4a38827.e27a18",
-        "name": "Split into an array",
-        "methods": [
-            {
-                "name": "lines",
-                "params": []
-            }
-        ],
-        "prop": "payload",
-        "propout": "itemlist",
-        "object": "msg",
-        "objectout": "msg",
-        "x": 800,
-        "y": 640,
-        "wires": [
-            [
-                "e1a3068a.3656d8"
-            ]
-        ]
-    },
-    {
-        "id": "e1a3068a.3656d8",
-        "type": "function",
-        "z": "c4a38827.e27a18",
-        "name": "Discord message",
-        "func": "var items = msg.itemlist.length-1;\nvar itemliststart = (items > 50) ? items-50:0;\n\nif (items > 50) {\n    msg.payload = \"There are **\" + items + \" items** in my inventory **(listing last 50)**:\\n```\";\n} else {\n    msg.payload = \"There are **\" + items + \" items** in my inventory:\\n```\";\n}\n\nfor (i = itemliststart; i < items; i++) {\n    msg.payload += msg.itemlist[i] + \", \";\n}\n\nmsg.payload = msg.payload.slice(0, -2); \nmsg.payload += \"```\"\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 1010,
-        "y": 640,
-        "wires": [
-            [
-                "3cf00799.0727b"
-            ]
-        ]
-    },
-    {
-        "id": "6e28a165.83871",
+        "id": "d7a68663.9a1208",
         "type": "switch",
-        "z": "c4a38827.e27a18",
+        "z": "d3710e77.fdc7b",
         "name": "My my my",
         "property": "payload",
         "propertyType": "msg",
@@ -381,57 +397,44 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 730,
-        "y": 480,
+        "x": 850,
+        "y": 320,
         "wires": [
             [
-                "f19f6e6b.76caa"
+                "da630a34.b06b98"
             ],
             [
-                "31289b34.11327c"
+                "7eaea04b.ba0ed"
             ]
         ]
     },
     {
-        "id": "f19f6e6b.76caa",
-        "type": "subflow:f7b13973.8fd138",
-        "z": "c4a38827.e27a18",
-        "name": "",
-        "x": 830,
-        "y": 440,
+        "id": "8a223710.f17a08",
+        "type": "function",
+        "z": "d3710e77.fdc7b",
+        "name": "Discord message",
+        "func": "// If there was an error, print it\nif (msg.error) {\n    msg.payload = \"I came up with an error: `\" + msg.error + \"`\";\n    return msg; }\n\n// Let's proceed\nmsg.inventory = msg.payload.join(\", \");\nvar items = msg.payload.length;\n\nif (items > 50) {\n    msg.payload = \"There are **\" + items + \" items** in my inventory **(listing last 50)**:\\n```\" + msg.inventory + \"```\";\n} else if (items === 0) {\n    msg.payload = \"I am an empty bucket. :(\"\n    } else {\n    msg.payload = \"There are **\" + items + \" items** in my inventory:\\n```\" + msg.inventory + \"```\";\n}\n\nreturn msg;\n\n// Old Method\n\nvar itemliststart = (items > 50) ? items-50:0;\nfor (i = itemliststart; i < items; i++) {\n    msg.inventory += msg.payload[i] + \", \";\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 710,
+        "y": 780,
         "wires": [
             [
-                "31289b34.11327c"
+                "cb7941c8.d703b"
             ]
         ]
     },
     {
-        "id": "75f3a7fc.b54d68",
-        "type": "filter",
-        "z": "c4a38827.e27a18",
-        "name": "Accept w/ /me",
-        "property": "payload",
-        "filter": "^_gives Bucket .+_$",
-        "ignorecase": true,
-        "x": 340,
-        "y": 500,
-        "wires": [
-            [
-                "89984776.8fc358"
-            ]
-        ]
-    },
-    {
-        "id": "6fc661c7.0f23d",
+        "id": "86b02198.e22b",
         "type": "change",
-        "z": "c4a38827.e27a18",
+        "z": "d3710e77.fdc7b",
         "name": "",
         "rules": [
             {
                 "t": "move",
                 "p": "payload",
                 "pt": "msg",
-                "to": "newitem",
+                "to": "allitems",
                 "tot": "msg"
             }
         ],
@@ -440,55 +443,31 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1410,
-        "y": 440,
+        "x": 1090,
+        "y": 540,
         "wires": [
             [
-                "9f99ee46.e5b658"
+                "2c24d429.56391c"
             ]
         ]
     },
     {
-        "id": "89984776.8fc358",
-        "type": "string",
-        "z": "c4a38827.e27a18",
-        "name": "Extract item descriptor",
-        "methods": [
-            {
-                "name": "delLeftMost",
-                "params": [
-                    {
-                        "type": "str",
-                        "value": "ucket "
-                    }
-                ]
-            },
-            {
-                "name": "delRightMost",
-                "params": [
-                    {
-                        "type": "str",
-                        "value": "_"
-                    }
-                ]
-            }
-        ],
-        "prop": "payload",
-        "propout": "payload",
-        "object": "msg",
-        "objectout": "msg",
-        "x": 540,
-        "y": 500,
+        "id": "da630a34.b06b98",
+        "type": "subflow:e268b9e1.d87a98",
+        "z": "d3710e77.fdc7b",
+        "name": "",
+        "x": 850,
+        "y": 340,
         "wires": [
             [
-                "6e28a165.83871"
+                "7eaea04b.ba0ed"
             ]
         ]
     },
     {
-        "id": "31289b34.11327c",
+        "id": "7eaea04b.ba0ed",
         "type": "change",
-        "z": "c4a38827.e27a18",
+        "z": "d3710e77.fdc7b",
         "name": "",
         "rules": [
             {
@@ -504,71 +483,151 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 920,
-        "y": 480,
+        "x": 860,
+        "y": 380,
         "wires": [
             [
-                "f2137702.c5fe3"
+                "2fcd381c.6227d8"
             ]
         ]
     },
     {
-        "id": "f2137702.c5fe3",
-        "type": "file in",
-        "z": "c4a38827.e27a18",
-        "name": "Read inventory file",
-        "filename": "/home/homeassistant/nodered-bucketinventory.json",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "x": 1150,
-        "y": 400,
-        "wires": [
-            [
-                "33b99864.1981"
-            ]
-        ]
-    },
-    {
-        "id": "33b99864.1981",
-        "type": "string",
-        "z": "c4a38827.e27a18",
-        "name": "Split into an array",
-        "methods": [
-            {
-                "name": "lines",
-                "params": []
-            }
-        ],
-        "prop": "payload",
-        "propout": "payload",
-        "object": "msg",
-        "objectout": "msg",
-        "x": 1150,
-        "y": 420,
-        "wires": [
-            [
-                "e21a6b8b.5b72"
-            ]
-        ]
-    },
-    {
-        "id": "e21a6b8b.5b72",
+        "id": "a520f5fc.9df4b8",
         "type": "function",
-        "z": "c4a38827.e27a18",
-        "name": "Check Dupes",
-        "func": "var itemlist = msg.payload;\nvar itemtocheck = flow.get('newitem');\n\nif (itemlist.includes(itemtocheck)) {\n    return [null, msg]; // Is a duplicate\n} else {\n    msg.payload = itemtocheck;\n    return [msg, null]; // Is NOT a duplicate\n}",
+        "z": "d3710e77.fdc7b",
+        "name": "Discord message",
+        "func": "// Check that hands aren't empty\nif (msg.payload.length === 0) {\n    msg.payload = \"But I don't have anything!\";\n    return [msg, null];\n}\n\n// calculate the item to give, delete it from\n// the array, and give it to the beggar\nvar items = msg.payload.length-1;\nvar randitem = Math.floor(Math.random()*items);\nmsg.randitem = msg.payload.splice(randitem,1); //Delete the item when handing it out\nvar newItemList = { payload: msg.payload };\n\n// Random messages\nvar randmessage = [];\nrandmessage[0] = \"-gives you a brightly wrapped package containing *\" + msg.randitem + \"*.-\";\nrandmessage[1] = \"-hands you *\" + msg.randitem + \"*-\";\nrandmessage[2] = \"-gives you *\" + msg.randitem + \"*-\";\nrandmessage[3] = \"Here then, have *\" + msg.randitem + \"*\";\nrandmessage[4] = \"-slaps <@\" + msg.author + \"> around a bit with *\" + msg.randitem + \"*-\";\n// Cycle through them\nvar count = context.get('count')||0;\nmsg.payload = randmessage[count];\n\n// Increment count, reset if too high\ncount += 1;\nif (count > randmessage.length-1) count = 0;\ncontext.set('count',count);\n\n// Send\nreturn [msg, newItemList];",
         "outputs": 2,
         "noerr": 0,
-        "x": 1160,
-        "y": 460,
+        "x": 730,
+        "y": 680,
         "wires": [
             [
-                "8e70e2d9.541fb8",
-                "6fc661c7.0f23d"
+                "41397579.8cae0c",
+                "cef06b07.dd20a8"
             ],
             [
-                "bfcebd7.26fe2c"
+                "690d1778.f90078"
+            ]
+        ]
+    },
+    {
+        "id": "cb7941c8.d703b",
+        "type": "link out",
+        "z": "d3710e77.fdc7b",
+        "name": "",
+        "links": [
+            "282535c.7b81aca"
+        ],
+        "x": 855,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "2c24d429.56391c",
+        "type": "function",
+        "z": "d3710e77.fdc7b",
+        "name": "Shuffle and add items from known inventory",
+        "func": "var itemlist = msg.allitems;\nvar items = itemlist.length-1;\n\nmsg.payload = [];\nfor (i = 0; i < 3; i++) {\n    var randitem = Math.floor(Math.random()*3);\n    itemlist = itemlist.sort(function(a, b){return 0.5 - Math.random()});\n    msg.payload.push(itemlist[randitem]);\n}\n\nmsg.allitems = null; //clean object\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1410,
+        "y": 540,
+        "wires": [
+            [
+                "b6a8ee8b.26f5c",
+                "e5d01ba.d9683e8",
+                "4aee1bb9.6821b4"
+            ]
+        ]
+    },
+    {
+        "id": "2fcd381c.6227d8",
+        "type": "DataOut",
+        "z": "d3710e77.fdc7b",
+        "collection": "f8c73668.33ec18",
+        "name": "",
+        "topic": "/allitems",
+        "error": false,
+        "x": 1110,
+        "y": 300,
+        "wires": [
+            [
+                "7fcb935a.d6388c"
+            ]
+        ]
+    },
+    {
+        "id": "4f14c924.28c318",
+        "type": "link out",
+        "z": "d3710e77.fdc7b",
+        "name": "",
+        "links": [
+            "282535c.7b81aca"
+        ],
+        "x": 1935,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "41397579.8cae0c",
+        "type": "debug",
+        "z": "d3710e77.fdc7b",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 990,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "b6a8ee8b.26f5c",
+        "type": "function",
+        "z": "d3710e77.fdc7b",
+        "name": "Discord message",
+        "func": "// Random messages\nvar randmessage = [];\nrandmessage[0] = \"Well, I had a look around and found you \" + msg.payload[0] + \", \" + msg.payload[1] + \", and \" + msg.payload[2] + \"!\";\nrandmessage[1] = \"-found \" + msg.payload[0] + \", \" + msg.payload[1] + \", and \" + msg.payload[2] + \"-\";\nrandmessage[2] = \"-found \" + msg.payload[0] + \" and some others. How does counting?-\";\n\n// Cycle through them\nvar count = context.get('count')||0;\nmsg.payload = randmessage[count];\n\n// Increment count, reset if too high\ncount += 1;\nif (count > randmessage.length-1) count = 0;\ncontext.set('count',count);\n\n// Send\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1770,
+        "y": 540,
+        "wires": [
+            [
+                "4f14c924.28c318"
+            ]
+        ]
+    },
+    {
+        "id": "e5d01ba.d9683e8",
+        "type": "DataIn",
+        "z": "d3710e77.fdc7b",
+        "collection": "f8c73668.33ec18",
+        "name": "",
+        "update": true,
+        "topic": "/helditems",
+        "x": 1710,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "7fcb935a.d6388c",
+        "type": "function",
+        "z": "d3710e77.fdc7b",
+        "name": "Check Dupes",
+        "func": "var itemlist = msg.payload;\nvar itemtocheck = flow.get('newitem');\n\nif (itemlist.includes(itemtocheck)) {\n    return [null, msg]; // Is a duplicate\n} else {\n    msg.newitem = [];\n    msg.newitem[0] = itemtocheck;\n    return [msg, null]; // Is NOT a duplicate\n}",
+        "outputs": 2,
+        "noerr": 0,
+        "x": 1100,
+        "y": 360,
+        "wires": [
+            [
+                "88b7b31.7fb155",
+                "625b45a3.f778ac"
+            ],
+            [
+                "542f967e.7fde48"
             ]
         ],
         "outputLabels": [
@@ -577,135 +636,356 @@
         ]
     },
     {
-        "id": "bfcebd7.26fe2c",
+        "id": "f2732ae.3c498d8",
+        "type": "change",
+        "z": "d3710e77.fdc7b",
+        "name": "",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "newitem",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1690,
+        "y": 360,
+        "wires": [
+            [
+                "c839f3c.91d031"
+            ]
+        ]
+    },
+    {
+        "id": "542f967e.7fde48",
         "type": "function",
-        "z": "c4a38827.e27a18",
+        "z": "d3710e77.fdc7b",
         "name": "Duplicate item message",
-        "func": "msg.payload = \"I already have that.\";\n\nreturn msg;",
+        "func": "// Random messages\nvar randmessage = [];\nrandmessage[0] = \"I already have that.\";\nrandmessage[1] = \"No thanks, <@\" + msg.author + \">, I've already got one.\";\nrandmessage[2] = \"Sweet, now I have two!\\nWait, fuck, I broke one...\";\n\n// Cycle through them\nvar count = context.get('count')||0;\nmsg.payload = randmessage[count];\n\n// Increment count, reset if too high\ncount += 1;\nif (count > randmessage.length-1) count = 0;\ncontext.set('count',count);\n\n// Send\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1430,
-        "y": 480,
+        "x": 1710,
+        "y": 400,
         "wires": [
             [
-                "3cf00799.0727b"
+                "ecf17404.d6c418"
             ]
         ]
     },
     {
-        "id": "4c4831fa.8eafa",
-        "type": "file in",
-        "z": "c4a38827.e27a18",
-        "name": "Read inventory file",
-        "filename": "/home/homeassistant/nodered-bucketinventory.json",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "x": 730,
-        "y": 720,
-        "wires": [
-            [
-                "e2068b84.81fff8"
-            ]
-        ]
-    },
-    {
-        "id": "e2068b84.81fff8",
-        "type": "string",
-        "z": "c4a38827.e27a18",
-        "name": "Split into an array",
-        "methods": [
-            {
-                "name": "lines",
-                "params": []
-            }
-        ],
-        "prop": "payload",
-        "propout": "itemlist",
-        "object": "msg",
-        "objectout": "msg",
-        "x": 930,
-        "y": 720,
-        "wires": [
-            [
-                "79eceaf6.4d994c"
-            ]
-        ]
-    },
-    {
-        "id": "f1e169bb.2b3a",
-        "type": "filter",
-        "z": "c4a38827.e27a18",
-        "name": "Remove an item",
-        "property": "payload",
-        "filter": "delitem",
-        "ignorecase": true,
-        "x": 340,
-        "y": 720,
-        "wires": [
-            [
-                "373e027e.f9bd46"
-            ]
-        ]
-    },
-    {
-        "id": "373e027e.f9bd46",
-        "type": "string",
-        "z": "c4a38827.e27a18",
-        "name": "Extract item",
-        "methods": [
-            {
-                "name": "delLeftMost",
-                "params": [
-                    {
-                        "type": "str",
-                        "value": "delitem "
-                    }
-                ]
-            }
-        ],
-        "prop": "payload",
-        "propout": "delitem",
-        "object": "msg",
-        "objectout": "msg",
-        "x": 530,
-        "y": 720,
-        "wires": [
-            [
-                "4c4831fa.8eafa"
-            ]
-        ]
-    },
-    {
-        "id": "4c7bf4f8.70748c",
-        "type": "file",
-        "z": "c4a38827.e27a18",
+        "id": "b5fb60ea.a1dd5",
+        "type": "DataIn",
+        "z": "d3710e77.fdc7b",
+        "collection": "f8c73668.33ec18",
         "name": "",
-        "filename": "/home/homeassistant/nodered-bucketinventory.json",
-        "appendNewline": true,
-        "createDir": false,
-        "overwriteFile": "true",
-        "x": 1750,
-        "y": 780,
+        "update": true,
+        "topic": "/allitems",
+        "x": 1680,
+        "y": 280,
         "wires": []
     },
     {
-        "id": "79eceaf6.4d994c",
+        "id": "1b53f97c.6a8ab7",
+        "type": "DataIn",
+        "z": "d3710e77.fdc7b",
+        "collection": "f8c73668.33ec18",
+        "name": "",
+        "update": true,
+        "topic": "/helditems",
+        "x": 1680,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "c839f3c.91d031",
         "type": "function",
-        "z": "c4a38827.e27a18",
-        "name": "Attempt remove item",
-        "func": "var itemlist = msg.itemlist;\nvar delitem = msg.delitem;\n\nvar delindex = itemlist.indexOf(delitem);\nif (delindex > -1) {\n  itemlist.splice(delindex, 1);\n  msg.payload = itemlist.toString();\n  return [msg, null];\n} else {\n    msg.payload = \"I don't know that item.\";\n    return [null, msg];\n}\n",
-        "outputs": 2,
+        "z": "d3710e77.fdc7b",
+        "name": "Discord message",
+        "func": "// Random messages\nvar randmessage = [];\nrandmessage[0] = \"Alright, adding *\" + msg.newitem + \"* to my inventory.\";\nrandmessage[1] = \"Bucket is now carrying *\" + msg.newitem + \"*.\";\nrandmessage[2] = \"Taking *\" + msg.newitem + \"*.\";\nrandmessage[3] = \"-eats *\" + msg.newitem + \"*-\";\n\n// Cycle through them\nvar count = context.get('count')||0;\nmsg.payload = randmessage[count];\n\n// Increment count, reset if too high\ncount += 1;\nif (count > randmessage.length-1) count = 0;\ncontext.set('count',count);\n\n// Send\nreturn msg;",
+        "outputs": 1,
         "noerr": 0,
-        "x": 1140,
-        "y": 720,
+        "x": 1890,
+        "y": 360,
         "wires": [
             [
-                "18c6af3f.3e9be1",
-                "8b9aec6b.a86a5"
+                "ecf17404.d6c418"
+            ]
+        ]
+    },
+    {
+        "id": "ecf17404.d6c418",
+        "type": "link out",
+        "z": "d3710e77.fdc7b",
+        "name": "",
+        "links": [
+            "282535c.7b81aca"
+        ],
+        "x": 2055,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "2e48b8a6.7b4398",
+        "type": "DataIn",
+        "z": "d3710e77.fdc7b",
+        "collection": "f8c73668.33ec18",
+        "name": "",
+        "update": false,
+        "topic": "/helditems",
+        "x": 1150,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "80ac6988.b70158",
+        "type": "DataOut",
+        "z": "d3710e77.fdc7b",
+        "collection": "f8c73668.33ec18",
+        "name": "",
+        "topic": "/helditems",
+        "error": false,
+        "x": 570,
+        "y": 680,
+        "wires": [
+            [
+                "a520f5fc.9df4b8"
+            ]
+        ]
+    },
+    {
+        "id": "cef06b07.dd20a8",
+        "type": "link out",
+        "z": "d3710e77.fdc7b",
+        "name": "",
+        "links": [
+            "282535c.7b81aca"
+        ],
+        "x": 915,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "31e8aebe.750c42",
+        "type": "debug",
+        "z": "d3710e77.fdc7b",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 690,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "a5b6c08b.94f6f",
+        "type": "inject",
+        "z": "d3710e77.fdc7b",
+        "name": "Reset Held Items (Last Resort!)",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 170,
+        "y": 60,
+        "wires": [
+            [
+                "cadc04f4.ee4ed8"
+            ]
+        ]
+    },
+    {
+        "id": "cadc04f4.ee4ed8",
+        "type": "function",
+        "z": "d3710e77.fdc7b",
+        "name": "",
+        "func": "msg.payload = [];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 390,
+        "y": 60,
+        "wires": [
+            [
+                "3c978bf8.9eb0e4"
+            ]
+        ]
+    },
+    {
+        "id": "3c978bf8.9eb0e4",
+        "type": "DataIn",
+        "z": "d3710e77.fdc7b",
+        "collection": "f8c73668.33ec18",
+        "name": "",
+        "update": false,
+        "topic": "/helditems",
+        "x": 560,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "4aee1bb9.6821b4",
+        "type": "debug",
+        "z": "d3710e77.fdc7b",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 1730,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "690d1778.f90078",
+        "type": "DataIn",
+        "z": "d3710e77.fdc7b",
+        "collection": "f8c73668.33ec18",
+        "name": "",
+        "update": false,
+        "topic": "/helditems",
+        "x": 990,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "4d8f69ae.622388",
+        "type": "inject",
+        "z": "d3710e77.fdc7b",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 760,
+        "y": 520,
+        "wires": [
+            [
+                "bbef4a69.9d0518"
+            ]
+        ]
+    },
+    {
+        "id": "88b7b31.7fb155",
+        "type": "DataOut",
+        "z": "d3710e77.fdc7b",
+        "collection": "f8c73668.33ec18",
+        "name": "",
+        "topic": "/helditems",
+        "error": false,
+        "x": 1410,
+        "y": 300,
+        "wires": [
+            [
+                "6fbb4d57.21ea74",
+                "625b45a3.f778ac"
+            ]
+        ]
+    },
+    {
+        "id": "6fbb4d57.21ea74",
+        "type": "function",
+        "z": "d3710e77.fdc7b",
+        "name": "FILO check (Bypassed)",
+        "func": "msg.payload = msg.newitem;\nreturn [msg, null];\n\n//I moved stuff down here to test something\n\n// Checks if inventory is full or overflowing\n// If so, trims the list down to fit the new item\nvar invlimit = flow.get(invlimit); // Inventory Limit, shouldn't hold more than this\nvar invcount = msg.payload.length;\nif (invcount >= invlimit) {\n    msg.droppeditems = msg.payload.splice(0,invcount-invlimit+1); //+1 to fit the new item\n    \n    // Random messages\n    var randmessage = [];\n    randmessage[0] = \"-is now carrying \" + msg.newitem + \", but dropped \" + msg.droppeditems.join(\", \") + \".-\";\n    randmessage[1] = \"-hands you \" + msg.droppeditems.join(\", \") + \" in exchange for \" + msg.newitem + \"-\";\n    \n    // Cycle through them\n    var count = context.get('count')||0;\n    msg.payload = randmessage[count];\n    \n    // Increment count, reset if too high\n    count += 1;\n    if (count > randmessage.length-1) count = 0;\n    context.set('count',count);\n    \n    var newItemMsg = { payload: msg.newitem };\n    // Send\n    return [newItemMsg, msg];\n}\n\nmsg.payload = msg.newitem;",
+        "outputs": 2,
+        "noerr": 0,
+        "x": 1410,
+        "y": 360,
+        "wires": [
+            [
+                "b5fb60ea.a1dd5",
+                "1b53f97c.6a8ab7",
+                "f2732ae.3c498d8",
+                "48549cf5.abf934"
             ],
             [
-                "3cf00799.0727b"
+                "34b8e222.1e505e"
+            ]
+        ]
+    },
+    {
+        "id": "34b8e222.1e505e",
+        "type": "link out",
+        "z": "d3710e77.fdc7b",
+        "name": "",
+        "links": [
+            "282535c.7b81aca"
+        ],
+        "x": 1515,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "48549cf5.abf934",
+        "type": "debug",
+        "z": "d3710e77.fdc7b",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 1650,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "fe7bf614.71ead8",
+        "type": "function",
+        "z": "d3710e77.fdc7b",
+        "name": "",
+        "func": "msg.payload = msg.payload.replace(/Bucket, (take|have) /i,'Bucket, take ')\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 450,
+        "y": 380,
+        "wires": [
+            [
+                "7d35f92c.1c8cb8"
+            ]
+        ]
+    },
+    {
+        "id": "e68d6da7.d6f77",
+        "type": "comment",
+        "z": "d3710e77.fdc7b",
+        "name": "TODO: 'find' items from conversation",
+        "info": "",
+        "x": 360,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "7d33cf34.b876d",
+        "type": "function",
+        "z": "d3710e77.fdc7b",
+        "name": "Attempt remove item",
+        "func": "if (msg.author != \"49288117307310080\") {\n    msg.payload = \"Get <@49288117307310080> to do this!\";\n    return [null, msg];\n}\n\nvar itemlist = msg.payload;\nvar delitem = msg.delitem;\n\nvar delindex = itemlist.indexOf(delitem);\nif (delindex > -1) {\n    itemlist.splice(delindex, 1);\n    msg.payload = itemlist;\n  return [msg, null];\n} else {\n    msg.payload = \"I don't know that item.\";\n    return [null, msg];\n}\n",
+        "outputs": 2,
+        "noerr": 0,
+        "x": 900,
+        "y": 1060,
+        "wires": [
+            [
+                "5696ca7c.385f34",
+                "30366fac.c1ef1"
+            ],
+            [
+                "aa89df21.f22b3"
             ]
         ],
         "outputLabels": [
@@ -714,67 +994,551 @@
         ]
     },
     {
-        "id": "18c6af3f.3e9be1",
+        "id": "5696ca7c.385f34",
         "type": "function",
-        "z": "c4a38827.e27a18",
+        "z": "d3710e77.fdc7b",
         "name": "Discord message",
-        "func": "// Pick one!\nmsg.payload = \"OK, removed *\" + msg.delitem + \"* from my inventory.\";\n\nreturn msg;",
+        "func": "// Pick one!\nmsg.payload = \"OK, destroyed *\" + msg.delitem + \"*. Now I'll never see it again... until you give it to me.\";\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1450,
-        "y": 740,
+        "x": 1210,
+        "y": 1040,
         "wires": [
             [
-                "3cf00799.0727b"
+                "aa89df21.f22b3"
             ]
         ]
     },
     {
-        "id": "8b9aec6b.a86a5",
-        "type": "function",
-        "z": "c4a38827.e27a18",
-        "name": "New item list",
-        "func": "var items = msg.itemlist.length-1;\nmsg.payload = \"\";\nfor (i = 0; i < items; i++) {\n    msg.payload += msg.itemlist[i] + \"\\n\";\n}\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 1350,
-        "y": 780,
-        "wires": [
-            [
-                "49d6ed7f.94207c"
-            ]
-        ]
-    },
-    {
-        "id": "49d6ed7f.94207c",
-        "type": "string",
-        "z": "c4a38827.e27a18",
+        "id": "aa89df21.f22b3",
+        "type": "link out",
+        "z": "d3710e77.fdc7b",
         "name": "",
+        "links": [
+            "282535c.7b81aca"
+        ],
+        "x": 1355,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "f3a4ca4a.2038e8",
+        "type": "DataOut",
+        "z": "d3710e77.fdc7b",
+        "collection": "f8c73668.33ec18",
+        "name": "",
+        "topic": "/allitems",
+        "error": false,
+        "x": 710,
+        "y": 1060,
+        "wires": [
+            [
+                "7d33cf34.b876d"
+            ]
+        ]
+    },
+    {
+        "id": "f3dc16b7.d43e18",
+        "type": "string",
+        "z": "d3710e77.fdc7b",
+        "name": "Extract item",
         "methods": [
             {
-                "name": "replaceAll",
+                "name": "delLeftMost",
                 "params": [
                     {
                         "type": "str",
-                        "value": "\\n\\n"
-                    },
-                    {
-                        "type": "str",
-                        "value": "\\n"
+                        "value": "destroy "
                     }
                 ]
             }
         ],
         "prop": "payload",
-        "propout": "payload",
+        "propout": "delitem",
         "object": "msg",
         "objectout": "msg",
-        "x": 1490,
-        "y": 780,
+        "x": 570,
+        "y": 1060,
         "wires": [
             [
-                "4c7bf4f8.70748c"
+                "f3a4ca4a.2038e8"
             ]
         ]
+    },
+    {
+        "id": "6ba71f1.ee982e",
+        "type": "filter",
+        "z": "d3710e77.fdc7b",
+        "name": "DESTROY an item",
+        "property": "payload",
+        "propertyType": "msg",
+        "asArray": false,
+        "itemProperty": "",
+        "itemPropertyType": "item",
+        "rules": [
+            {
+                "t": "regex",
+                "v": "^Bucket, destroy ",
+                "vt": "str",
+                "case": true,
+                "output": 1
+            }
+        ],
+        "outputs": 1,
+        "x": 390,
+        "y": 1060,
+        "wires": [
+            [
+                "f3dc16b7.d43e18",
+                "2dabb63.a17334a"
+            ]
+        ]
+    },
+    {
+        "id": "30366fac.c1ef1",
+        "type": "DataIn",
+        "z": "d3710e77.fdc7b",
+        "collection": "f8c73668.33ec18",
+        "name": "",
+        "update": false,
+        "topic": "/allitems",
+        "x": 1130,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "ad0762d7.7899d",
+        "type": "DataOut",
+        "z": "d3710e77.fdc7b",
+        "collection": "f8c73668.33ec18",
+        "name": "",
+        "topic": "/",
+        "error": false,
+        "x": 650,
+        "y": 860,
+        "wires": [
+            [
+                "7f671c8f.8fad34"
+            ]
+        ]
+    },
+    {
+        "id": "855a2127.f8617",
+        "type": "http request",
+        "z": "d3710e77.fdc7b",
+        "name": "",
+        "method": "PUT",
+        "ret": "txt",
+        "url": "https://jsonblob.com/api/jsonBlob/0d2ca6e2-60e4-11e8-84ab-e7936a009f58",
+        "tls": "",
+        "x": 990,
+        "y": 860,
+        "wires": [
+            [
+                "84545cf1.35f2c",
+                "6f38f667.901608"
+            ]
+        ]
+    },
+    {
+        "id": "7f671c8f.8fad34",
+        "type": "function",
+        "z": "d3710e77.fdc7b",
+        "name": "Set HTTP Data",
+        "func": "msg.headers = {};\nmsg.headers['Content-Type'] = 'application/json';\nmsg.headers['Accept'] = 'application/json';\n\nmsg.payload = JSON.stringify(msg.payload);\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 800,
+        "y": 860,
+        "wires": [
+            [
+                "855a2127.f8617"
+            ]
+        ]
+    },
+    {
+        "id": "84545cf1.35f2c",
+        "type": "debug",
+        "z": "d3710e77.fdc7b",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 1070,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "e2feec4a.e84e8",
+        "type": "inject",
+        "z": "d3710e77.fdc7b",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 480,
+        "y": 900,
+        "wires": [
+            [
+                "ad0762d7.7899d"
+            ]
+        ]
+    },
+    {
+        "id": "6f38f667.901608",
+        "type": "function",
+        "z": "d3710e77.fdc7b",
+        "name": "Discord message",
+        "func": "if (msg.headers.location) { var url = msg.headers.location } else if (msg.responseUrl) { var url = msg.responseUrl }\n\nmsg.payload = \"Find my complete inventory (held items and known items) at \" + url.replace('api/jsonBlob/','');\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1190,
+        "y": 860,
+        "wires": [
+            [
+                "461ec6ce.6c8d18"
+            ]
+        ]
+    },
+    {
+        "id": "461ec6ce.6c8d18",
+        "type": "link out",
+        "z": "d3710e77.fdc7b",
+        "name": "",
+        "links": [
+            "282535c.7b81aca"
+        ],
+        "x": 1315,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "3c781b24.1aa7f4",
+        "type": "function",
+        "z": "d3710e77.fdc7b",
+        "name": "inventory limit check",
+        "func": "// Checks if inventory is past the hard limit\nvar invlimit = flow.get('invhardlimit'); // Inventory Limit, shouldn't hold more than this\nvar invcount = msg.payload.length\nif (invcount >= invlimit) {\nmsg.payload = \"I can't carry any more! Take some items from me first!\";\nreturn [null, msg];\n} else { return [msg, null]; }",
+        "outputs": 2,
+        "noerr": 0,
+        "x": 720,
+        "y": 560,
+        "wires": [
+            [
+                "bbef4a69.9d0518"
+            ],
+            [
+                "e0bae8c0.7ac958"
+            ]
+        ]
+    },
+    {
+        "id": "80be7491.64c9d8",
+        "type": "DataOut",
+        "z": "d3710e77.fdc7b",
+        "collection": "f8c73668.33ec18",
+        "name": "",
+        "topic": "/helditems",
+        "error": false,
+        "x": 550,
+        "y": 560,
+        "wires": [
+            [
+                "3c781b24.1aa7f4"
+            ]
+        ]
+    },
+    {
+        "id": "e0bae8c0.7ac958",
+        "type": "link out",
+        "z": "d3710e77.fdc7b",
+        "name": "",
+        "links": [
+            "282535c.7b81aca"
+        ],
+        "x": 875,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "f59af6d9.a294c8",
+        "type": "inject",
+        "z": "d3710e77.fdc7b",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 820,
+        "y": 60,
+        "wires": [
+            [
+                "5bfea7fb.1d98c8"
+            ]
+        ]
+    },
+    {
+        "id": "5bfea7fb.1d98c8",
+        "type": "github-repo",
+        "z": "d3710e77.fdc7b",
+        "github": "",
+        "name": "",
+        "username": "sflavelle",
+        "usernameType": "str",
+        "repository": "tedbeet-data",
+        "repositoryType": "str",
+        "action": "read",
+        "branch": "master",
+        "branchType": "str",
+        "path": "nodered-bucket-inventory.json",
+        "pathType": "str",
+        "pathto": "",
+        "pathtoType": "str",
+        "contents": "payload",
+        "contentsType": "msg",
+        "outputs": "1",
+        "x": 1020,
+        "y": 60,
+        "wires": [
+            [
+                "5079497d.baf0e8",
+                "1aceda6d.d60b26"
+            ]
+        ]
+    },
+    {
+        "id": "5079497d.baf0e8",
+        "type": "DataIn",
+        "z": "d3710e77.fdc7b",
+        "collection": "f8c73668.33ec18",
+        "name": "",
+        "update": false,
+        "topic": "/",
+        "x": 1210,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "1aceda6d.d60b26",
+        "type": "debug",
+        "z": "d3710e77.fdc7b",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 1220,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "aeee4dc8.b0deb",
+        "type": "debug",
+        "z": "d3710e77.fdc7b",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 530,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "3c5cadf1.94c122",
+        "type": "debug",
+        "z": "d3710e77.fdc7b",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 530,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "c9cab490.0bbfa8",
+        "type": "debug",
+        "z": "d3710e77.fdc7b",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 520,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "fe2e0ee0.43ba6",
+        "type": "debug",
+        "z": "d3710e77.fdc7b",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 510,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "ec038475.4c3828",
+        "type": "debug",
+        "z": "d3710e77.fdc7b",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 680,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "5ba2d756.b30888",
+        "type": "debug",
+        "z": "d3710e77.fdc7b",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 540,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "2dabb63.a17334a",
+        "type": "debug",
+        "z": "d3710e77.fdc7b",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 570,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "48d708bf.5b4aa8",
+        "type": "filter",
+        "z": "d3710e77.fdc7b",
+        "name": "Accept an item",
+        "property": "payload",
+        "propertyType": "msg",
+        "asArray": false,
+        "itemProperty": "",
+        "itemPropertyType": "item",
+        "rules": [
+            {
+                "t": "regex",
+                "v": "^Bucket, (take|have)",
+                "vt": "str",
+                "case": true,
+                "output": 1
+            }
+        ],
+        "checkall": "false",
+        "outputs": 1,
+        "x": 340,
+        "y": 340,
+        "wires": [
+            [
+                "fe7bf614.71ead8",
+                "aeee4dc8.b0deb"
+            ]
+        ]
+    },
+    {
+        "id": "f66e177a.1eabf8",
+        "type": "filter",
+        "z": "d3710e77.fdc7b",
+        "name": "List items",
+        "property": "payload",
+        "propertyType": "msg",
+        "asArray": false,
+        "itemProperty": "payload",
+        "itemPropertyType": "item",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "lsitems",
+                "vt": "str",
+                "output": 1
+            },
+            {
+                "t": "eq",
+                "v": "inventory",
+                "vt": "str",
+                "output": 1
+            },
+            {
+                "t": "eq",
+                "v": "lsitems all",
+                "vt": "str",
+                "output": 2
+            },
+            {
+                "t": "eq",
+                "v": "inventory all",
+                "vt": "str",
+                "output": 2
+            }
+        ],
+        "checkall": "true",
+        "outputs": 2,
+        "x": 340,
+        "y": 820,
+        "wires": [
+            [
+                "9aadb919.fd1848",
+                "fe2e0ee0.43ba6"
+            ],
+            [
+                "ad0762d7.7899d",
+                "ec038475.4c3828"
+            ]
+        ]
+    },
+    {
+        "id": "625b45a3.f778ac",
+        "type": "debug",
+        "z": "d3710e77.fdc7b",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 1400,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "f8c73668.33ec18",
+        "type": "json-db-collection",
+        "z": "",
+        "name": "Bucket Inventory",
+        "collection": "bucketinventory",
+        "save": true
     }
 ]
